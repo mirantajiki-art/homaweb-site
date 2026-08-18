@@ -1,1 +1,419 @@
+<!-- ================= ORDER ANIMATION ================= -->
 
+<style>
+.order-animation{
+    position:relative;
+    width:100%;
+    max-width:480px;
+    height:430px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+/* نور پشت شخصیت */
+.order-animation .glow{
+    position:absolute;
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    background:rgba(116,57,238,.12);
+    filter:blur(55px);
+    animation:glowMove 4s ease-in-out infinite;
+}
+
+@keyframes glowMove{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.12)}
+}
+
+/* فرم */
+.order-animation .mini-form{
+    position:absolute;
+    left:25px;
+    top:55px;
+    width:205px;
+    padding:18px;
+    border-radius:22px;
+    background:#fff;
+    border:1px solid #eee8f7;
+    box-shadow:0 20px 45px rgba(47,25,90,.12);
+    z-index:10;
+    animation:formFloat 4s ease-in-out infinite;
+}
+
+@keyframes formFloat{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-8px)}
+}
+
+.mini-form-title{
+    font-size:13px;
+    font-weight:900;
+    margin-bottom:14px;
+}
+
+.mini-input{
+    height:12px;
+    border-radius:10px;
+    background:#eeeaf5;
+    margin-bottom:9px;
+}
+
+.mini-input.short{
+    width:65%;
+}
+
+.mini-button{
+    height:32px;
+    border-radius:12px;
+    margin-top:12px;
+    background:linear-gradient(135deg,#8435f3,#5b45ef);
+    position:relative;
+    overflow:hidden;
+}
+
+.mini-button:after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-70px;
+    width:45px;
+    height:100%;
+    background:rgba(255,255,255,.35);
+    transform:skewX(-20deg);
+    animation:shine 2.8s infinite;
+}
+
+@keyframes shine{
+    0%{left:-70px}
+    45%,100%{left:230px}
+}
+
+/* شخصیت */
+.person-order{
+    position:absolute;
+    right:45px;
+    bottom:55px;
+    width:220px;
+    height:300px;
+    z-index:5;
+}
+
+/* سر */
+.person-order .head{
+    position:absolute;
+    top:5px;
+    right:62px;
+    width:88px;
+    height:103px;
+    border-radius:48% 48% 43% 43%;
+    background:#f2bb91;
+    z-index:5;
+}
+
+/* مو */
+.person-order .hair{
+    position:absolute;
+    top:-10px;
+    right:-3px;
+    width:95px;
+    height:58px;
+    border-radius:55px 55px 25px 25px;
+    background:#272032;
+}
+
+.person-order .hair:after{
+    content:"";
+    position:absolute;
+    right:8px;
+    top:35px;
+    width:24px;
+    height:39px;
+    border-radius:0 0 18px 18px;
+    background:#272032;
+}
+
+/* چشم‌ها */
+.person-order .eye{
+    position:absolute;
+    top:52px;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#312430;
+    transition:.3s;
+}
+
+.person-order .eye.one{
+    right:23px;
+}
+
+.person-order .eye.two{
+    right:56px;
+}
+
+/* نگاه کردن به فرم */
+.person-order:hover .eye.one{
+    transform:translateX(-5px);
+}
+
+.person-order:hover .eye.two{
+    transform:translateX(-5px);
+}
+
+/* لبخند */
+.person-order .smile{
+    position:absolute;
+    top:77px;
+    right:36px;
+    width:23px;
+    height:9px;
+    border-bottom:2px solid #904f5a;
+    border-radius:50%;
+}
+
+/* بدن */
+.person-order .body{
+    position:absolute;
+    top:103px;
+    right:38px;
+    width:150px;
+    height:180px;
+    border-radius:55px 55px 25px 25px;
+    background:linear-gradient(145deg,#7639ee,#5146c9);
+    box-shadow:0 20px 35px rgba(71,43,161,.18);
+}
+
+/* دست */
+.person-order .arm{
+    position:absolute;
+    top:130px;
+    right:0;
+    width:130px;
+    height:26px;
+    border-radius:20px;
+    background:#f2bb91;
+    transform:rotate(28deg);
+    transform-origin:right center;
+    z-index:7;
+    animation:handMove 3s ease-in-out infinite;
+}
+
+@keyframes handMove{
+    0%,100%{
+        transform:rotate(28deg);
+    }
+    50%{
+        transform:rotate(18deg);
+    }
+}
+
+.person-order .hand{
+    position:absolute;
+    left:-10px;
+    top:-2px;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    background:#f2bb91;
+}
+
+/* لپ‌تاپ */
+.order-laptop{
+    position:absolute;
+    right:82px;
+    bottom:55px;
+    width:175px;
+    z-index:12;
+}
+
+.order-screen{
+    width:155px;
+    height:95px;
+    margin:auto;
+    padding:13px;
+    border:8px solid #292239;
+    border-radius:15px 15px 8px 8px;
+    background:#171326;
+    box-shadow:0 15px 25px rgba(25,15,48,.2);
+}
+
+.order-code{
+    width:85%;
+    height:5px;
+    margin-bottom:8px;
+    border-radius:8px;
+    background:#8245f1;
+}
+
+.order-code:nth-child(2){
+    width:60%;
+    background:#54a4ff;
+}
+
+.order-code:nth-child(3){
+    width:72%;
+    background:#72ddb0;
+}
+
+.order-code:nth-child(4){
+    width:45%;
+    background:#a675ff;
+}
+
+.order-keyboard{
+    width:180px;
+    height:18px;
+    margin:auto;
+    border-radius:0 0 18px 18px;
+    background:#393149;
+}
+
+/* میز */
+.order-desk{
+    position:absolute;
+    bottom:35px;
+    width:410px;
+    height:24px;
+    border-radius:20px;
+    background:linear-gradient(90deg,#28223a,#42355e);
+    z-index:4;
+}
+
+/* حباب راهنما */
+.order-bubble{
+    position:absolute;
+    right:0;
+    top:25px;
+    z-index:20;
+    padding:12px 17px;
+    border-radius:18px 18px 5px 18px;
+    background:#fff;
+    border:1px solid #eee8f7;
+    box-shadow:0 15px 35px rgba(47,25,90,.1);
+    font-size:12px;
+    font-weight:800;
+    animation:bubbleMove 3.5s ease-in-out infinite;
+}
+
+@keyframes bubbleMove{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-10px)}
+}
+
+/* نشانگر موس */
+.order-pointer{
+    position:absolute;
+    left:195px;
+    top:180px;
+    z-index:25;
+    font-size:25px;
+    animation:pointerMove 2.8s ease-in-out infinite;
+}
+
+@keyframes pointerMove{
+    0%,100%{
+        transform:translate(0,0);
+    }
+    50%{
+        transform:translate(35px,15px);
+    }
+}
+
+/* موبایل */
+@media(max-width:600px){
+
+    .order-animation{
+        transform:scale(.85);
+        margin-top:-25px;
+        margin-bottom:-30px;
+    }
+
+}
+</style>
+
+
+<div class="order-animation">
+
+    <div class="glow"></div>
+
+    <!-- فرم ثبت سفارش -->
+    <div class="mini-form">
+
+        <div class="mini-form-title">
+            📝 ثبت سفارش
+        </div>
+
+        <div class="mini-input"></div>
+        <div class="mini-input"></div>
+        <div class="mini-input short"></div>
+        <div class="mini-input"></div>
+
+        <div class="mini-button"></div>
+
+    </div>
+
+
+    <!-- حباب -->
+    <div class="order-bubble">
+        👀 در حال بررسی سفارش...
+    </div>
+
+
+    <!-- شخصیت -->
+    <div class="person-order">
+
+        <div class="head">
+
+            <div class="hair"></div>
+
+            <div class="eye one"></div>
+            <div class="eye two"></div>
+
+            <div class="smile"></div>
+
+        </div>
+
+
+        <div class="body"></div>
+
+
+        <div class="arm">
+
+            <div class="hand"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- لپ‌تاپ -->
+    <div class="order-laptop">
+
+        <div class="order-screen">
+
+            <div class="order-code"></div>
+            <div class="order-code"></div>
+            <div class="order-code"></div>
+            <div class="order-code"></div>
+
+        </div>
+
+        <div class="order-keyboard"></div>
+
+    </div>
+
+
+    <!-- موس -->
+    <div class="order-pointer">
+        🖱️
+    </div>
+
+
+    <!-- میز -->
+    <div class="order-desk"></div>
+
+          </div>
