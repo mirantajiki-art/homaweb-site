@@ -3,19 +3,78 @@
 <head>
   <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
-  <title>ساخت ربات اختصاصی | طراحی ربات برای کسب‌وکار</title>
+  <title>رباتیکا | ساخت ربات روبیکا، واتساپ و تلگرام</title>
 
   <meta name="description"
-    content="طراحی و ساخت ربات اختصاصی برای کسب‌وکارها؛ ربات فروشگاهی، ثبت سفارش، پاسخگویی خودکار، مدیریت کاربران و ربات روبیکا و تلگرام.">
+        content="ساخت ربات حرفه‌ای روبیکا، واتساپ و تلگرام برای فروشگاه‌ها، کسب‌وکارها و خدمات آنلاین. ربات فروش، پشتیبانی، پاسخگویی خودکار و مدیریت سفارش.">
 
   <meta name="keywords"
-    content="ساخت ربات, ربات اختصاصی, ربات روبیکا, ربات فروشگاهی, ربات ثبت سفارش, طراحی ربات, ربات کسب و کار">
+        content="ساخت ربات روبیکا, ربات روبیکا, طراحی ربات روبیکا, ربات فروش روبیکا, ربات واتساپ, ربات تلگرام, ساخت ربات تلگرام, ربات فروشگاهی, ربات کسب و کار">
 
-  <meta name="theme-color" content="#6d35e8">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="رباتیکا">
+
+  <meta property="og:title"
+        content="رباتیکا | ساخت ربات حرفه‌ای روبیکا، واتساپ و تلگرام">
+
+  <meta property="og:description"
+        content="ربات حرفه‌ای برای فروش، پشتیبانی، سفارش‌گیری و پاسخگویی خودکار کسب‌وکار شما.">
+
+  <meta property="og:type" content="website">
+
+  <link rel="canonical"
+        href="https://mirantajiki-art.github.io/homaweb-site/">
+
+  <!-- آیکن‌ها -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- فونت -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+  <!-- Schema SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "رباتیکا",
+    "description": "طراحی و ساخت ربات حرفه‌ای روبیکا، واتساپ و تلگرام برای کسب‌وکارها",
+    "url": "https://mirantajiki-art.github.io/homaweb-site/",
+    "telephone": "+989917163319",
+    "areaServed": "IR"
+  }
+  </script>
 
   <style>
+
+    :root {
+      --purple: #6d3df5;
+      --purple-dark: #4d22c8;
+      --blue: #4169ff;
+      --pink: #b43cff;
+      --green: #20c978;
+
+      --text: #17142a;
+      --muted: #737181;
+
+      --bg: #f7f7fc;
+      --white: #ffffff;
+
+      --border: #e9e8f1;
+
+      --shadow:
+        0 20px 60px rgba(36, 25, 86, .10);
+
+      --radius: 30px;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -27,943 +86,2112 @@
     }
 
     body {
-      font-family: Tahoma, Arial, sans-serif;
-      background: #f7f7fc;
-      color: #171525;
+      font-family: "Vazirmatn", Tahoma, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.9;
+      overflow-x: hidden;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
-    .container {
-      width: 92%;
-      max-width: 1150px;
-      margin: auto;
+    img {
+      max-width: 100%;
     }
 
-    /* HEADER */
+    /* =========================
+       HEADER
+    ========================== */
 
     header {
       position: sticky;
-      top: 0;
+      top: 15px;
       z-index: 1000;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(15px);
-      border-bottom: 1px solid #eeeeF5;
+
+      width: min(1180px, calc(100% - 30px));
+      margin: 15px auto 0;
+
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(20px);
+
+      border: 1px solid rgba(220,218,235,.8);
+      border-radius: 30px;
+
+      box-shadow: 0 15px 45px rgba(30,20,80,.08);
     }
 
     .nav {
       min-height: 78px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      padding: 12px 20px;
       gap: 20px;
     }
 
-    .logo {
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
       font-size: 22px;
       font-weight: 900;
-      color: #171525;
     }
 
-    .logo span {
-      color: #7137e8;
+    .brand-logo {
+      width: 50px;
+      height: 50px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 18px;
+
+      color: white;
+      background:
+        linear-gradient(135deg, var(--purple), var(--blue));
+
+      box-shadow:
+        0 10px 25px rgba(109,61,245,.30);
+
+      animation: floatLogo 4s ease-in-out infinite;
+    }
+
+    @keyframes floatLogo {
+      0%,100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 500;
     }
 
     .nav-links {
       display: flex;
-      gap: 25px;
       align-items: center;
-      font-size: 14px;
-      font-weight: bold;
+      gap: 8px;
     }
 
     .nav-links a {
-      transition: .3s;
+      padding: 10px 15px;
+      border-radius: 16px;
+
+      font-size: 14px;
+      font-weight: 600;
+
+      transition: .25s;
     }
 
     .nav-links a:hover {
-      color: #7137e8;
+      background: #f0edff;
+      color: var(--purple);
     }
 
-    .nav-btn {
-      background: linear-gradient(135deg, #7b35ed, #5c28d7);
+    .menu-btn {
+      display: none;
+
+      width: 48px;
+      height: 48px;
+
+      border: 0;
+      border-radius: 16px;
+
+      background: #f1effa;
+      color: var(--text);
+
+      font-size: 21px;
+    }
+
+    .header-cta {
+      padding: 13px 20px;
+
+      border-radius: 18px;
+
       color: white;
-      padding: 12px 22px;
-      border-radius: 40px;
-      box-shadow: 0 10px 25px rgba(108,50,230,.25);
+      font-weight: 800;
+
+      background:
+        linear-gradient(135deg, var(--purple), var(--pink));
+
+      box-shadow:
+        0 10px 25px rgba(109,61,245,.25);
+
+      transition: .25s;
     }
 
-    /* HERO */
+    .header-cta:hover {
+      transform: translateY(-3px);
+    }
+
+    /* =========================
+       HERO
+    ========================== */
 
     .hero {
-      padding: 85px 0 70px;
-      background:
-        radial-gradient(circle at 10% 20%, rgba(124,55,237,.15), transparent 30%),
-        radial-gradient(circle at 90% 10%, rgba(50,110,255,.12), transparent 30%);
+      position: relative;
+
+      width: min(1180px, calc(100% - 30px));
+      margin: 55px auto 0;
+
+      min-height: 680px;
+
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+
+      gap: 40px;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      align-items: center;
-      gap: 50px;
+    .hero::before {
+      content: "";
+
+      position: absolute;
+      width: 400px;
+      height: 400px;
+
+      background: rgba(116,61,245,.10);
+
+      filter: blur(80px);
+      border-radius: 50%;
+
+      top: 50px;
+      right: -120px;
+
+      z-index: -1;
+    }
+
+    .hero-text {
+      position: relative;
     }
 
     .badge {
-      display: inline-block;
-      padding: 8px 18px;
-      border-radius: 40px;
-      background: #eee7ff;
-      color: #6630d9;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      padding: 9px 15px;
+
+      border-radius: 50px;
+
+      background: #eeeaff;
+      color: var(--purple);
+
       font-size: 13px;
-      font-weight: bold;
+      font-weight: 800;
+
       margin-bottom: 20px;
     }
 
     .hero h1 {
-      font-size: clamp(35px, 5vw, 62px);
-      line-height: 1.35;
-      margin-bottom: 20px;
+      font-size: clamp(38px, 5vw, 68px);
+      line-height: 1.2;
+
+      font-weight: 900;
+
+      margin-bottom: 22px;
     }
 
-    .hero h1 span {
-      color: #7137e8;
+    .gradient-text {
+      background:
+        linear-gradient(
+          90deg,
+          var(--purple),
+          var(--pink),
+          var(--blue)
+        );
+
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .hero p {
-      color: #686779;
-      font-size: 18px;
       max-width: 650px;
+
+      color: var(--muted);
+
+      font-size: 18px;
+      line-height: 2;
+
       margin-bottom: 30px;
     }
 
-    .hero-buttons {
+    .buttons {
       display: flex;
-      gap: 14px;
       flex-wrap: wrap;
+      gap: 13px;
     }
 
     .btn {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      padding: 14px 25px;
-      border-radius: 45px;
-      font-weight: bold;
-      transition: .3s;
-      border: none;
-      cursor: pointer;
-    }
+      min-height: 56px;
 
-    .btn:hover {
-      transform: translateY(-3px);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+
+      padding: 0 25px;
+
+      border-radius: 20px;
+
+      font-weight: 800;
+
+      transition: .3s;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #7b35ed, #5724d2);
       color: white;
-      box-shadow: 0 15px 30px rgba(107,47,224,.25);
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--purple),
+          var(--pink)
+        );
+
+      box-shadow:
+        0 15px 35px rgba(109,61,245,.25);
     }
 
-    .btn-secondary {
+    .btn-primary:hover {
+      transform: translateY(-4px);
+      box-shadow:
+        0 20px 45px rgba(109,61,245,.35);
+    }
+
+    .btn-outline {
       background: white;
-      border: 1px solid #e5e1ef;
-      color: #29263b;
+      border: 1px solid var(--border);
     }
 
-    /* ROBOT */
+    .btn-outline:hover {
+      border-color: var(--purple);
+      color: var(--purple);
+      transform: translateY(-3px);
+    }
 
-    .robot-card {
-      min-height: 420px;
-      border-radius: 45px;
-      background: linear-gradient(145deg, #17132b, #30205b);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    /* =========================
+       ROBOT
+    ========================== */
+
+    .robot-area {
+      min-height: 550px;
+
       position: relative;
-      overflow: hidden;
-      box-shadow: 0 30px 70px rgba(40,25,90,.25);
+
+      display: grid;
+      place-items: center;
     }
 
-    .robot-card::before {
-      content: "";
+    .robot-glow {
       position: absolute;
-      width: 280px;
-      height: 280px;
-      background: #824cff;
-      filter: blur(100px);
-      opacity: .45;
-      border-radius: 50%;
+
+      width: 360px;
+      height: 360px;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(110,60,245,.30),
+          transparent 65%
+        );
+
+      filter: blur(15px);
     }
 
     .robot {
-      width: 190px;
-      height: 190px;
-      border-radius: 55px;
-      background: linear-gradient(145deg,#ffffff,#d9d9e8);
       position: relative;
-      z-index: 2;
-      box-shadow: 0 25px 50px rgba(0,0,0,.3);
+
+      width: 360px;
+      height: 330px;
+
+      border-radius: 100px 100px 125px 125px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #ffffff,
+          #ececf5
+        );
+
+      box-shadow:
+        0 35px 70px rgba(44,30,100,.22);
+
+      animation:
+        robotFloat 4s ease-in-out infinite;
     }
 
-    .robot-face {
-      width: 150px;
-      height: 105px;
-      background: #171525;
-      border-radius: 35px;
+    @keyframes robotFloat {
+
+      0%,100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-15px) rotate(1deg);
+      }
+
+    }
+
+    .robot-screen {
       position: absolute;
-      top: 25px;
-      left: 20px;
+
+      left: 38px;
+      right: 38px;
+      top: 40px;
+
+      height: 160px;
+
+      border-radius: 65px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #21183d,
+          #0e0c20
+        );
+
+      box-shadow:
+        inset 0 0 30px rgba(0,0,0,.35);
     }
 
     .eye {
-      width: 17px;
-      height: 17px;
-      background: #37caff;
-      border-radius: 50%;
       position: absolute;
-      top: 40px;
+
+      top: 58px;
+
+      width: 35px;
+      height: 65px;
+
+      border-radius: 30px;
+
+      background: white;
+
+      animation: blink 5s infinite;
     }
 
-    .eye.one {
-      right: 35px;
+    .eye.right {
+      right: 105px;
     }
 
-    .eye.two {
-      left: 35px;
+    .eye.left {
+      left: 105px;
     }
 
-    .mouth {
+    @keyframes blink {
+
+      0%, 94%, 100% {
+        transform: scaleY(1);
+      }
+
+      96% {
+        transform: scaleY(.1);
+      }
+
+    }
+
+    .brand-badge {
       position: absolute;
+
       bottom: 25px;
-      left: 62px;
-      width: 28px;
-      height: 12px;
-      border-bottom: 4px solid #37caff;
-      border-radius: 50%;
-    }
+      left: 50%;
 
-    .robot-text {
-      position: absolute;
-      bottom: 25px;
+      transform: translateX(-50%);
+
+      width: 125px;
+      height: 82px;
+
+      border-radius: 28px;
+
+      display: grid;
+      place-items: center;
+
       color: white;
-      font-weight: bold;
-      font-size: 15px;
-      z-index: 3;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--purple),
+          var(--blue)
+        );
+
+      box-shadow:
+        0 15px 35px rgba(80,50,230,.35);
+
+      font-size: 38px;
     }
 
-    /* SECTION */
+    .robot-label {
+      position: absolute;
 
-    section {
-      padding: 85px 0;
+      padding: 9px 15px;
+
+      border-radius: 50px;
+
+      background: white;
+
+      border: 1px solid var(--border);
+
+      box-shadow: 0 10px 25px rgba(0,0,0,.08);
+
+      font-size: 12px;
+      font-weight: 800;
     }
 
-    .section-title {
+    .label-one {
+      top: 100px;
+      right: -25px;
+    }
+
+    .label-two {
+      left: -15px;
+      top: 240px;
+    }
+
+    .label-three {
+      right: 20px;
+      bottom: 45px;
+    }
+
+    /* =========================
+       STATS
+    ========================== */
+
+    .stats {
+      width: min(1050px, calc(100% - 30px));
+
+      margin: -10px auto 80px;
+
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+
+      gap: 15px;
+    }
+
+    .stat {
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: 25px;
+
+      padding: 25px;
+
       text-align: center;
-      margin-bottom: 50px;
+
+      box-shadow: 0 10px 35px rgba(30,20,80,.05);
     }
 
-    .section-title h2 {
-      font-size: 36px;
-      margin-bottom: 10px;
+    .stat i {
+      font-size: 25px;
+      color: var(--purple);
+      margin-bottom: 8px;
     }
 
-    .section-title p {
-      color: #777486;
+    .stat strong {
+      display: block;
+      font-size: 25px;
     }
 
-    /* SERVICES */
+    .stat span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================
+       SECTIONS
+    ========================== */
+
+    .section {
+      width: min(1180px, calc(100% - 30px));
+
+      margin: 0 auto 100px;
+    }
+
+    .section-head {
+      max-width: 700px;
+      margin-bottom: 35px;
+    }
+
+    .section-head .mini {
+      color: var(--purple);
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.3;
+
+      margin: 8px 0 12px;
+
+      font-weight: 900;
+    }
+
+    .section-head p {
+      color: var(--muted);
+    }
+
+    /* =========================
+       SERVICES
+    ========================== */
 
     .services {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      grid-template-columns: repeat(3,1fr);
+      gap: 18px;
     }
 
     .service {
+      position: relative;
+
       background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: 30px;
+
       padding: 30px;
-      border-radius: 32px;
-      border: 1px solid #eeeaf7;
-      box-shadow: 0 15px 40px rgba(40,30,80,.06);
+
+      min-height: 270px;
+
+      box-shadow: var(--shadow);
+
+      overflow: hidden;
+
+      transition: .3s;
+    }
+
+    .service::after {
+      content: "";
+
+      position: absolute;
+
+      width: 120px;
+      height: 120px;
+
+      border-radius: 50%;
+
+      background: #eeeaff;
+
+      left: -50px;
+      bottom: -60px;
+
       transition: .3s;
     }
 
     .service:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 25px 50px rgba(40,30,80,.12);
+      transform: translateY(-8px);
+      border-color: #dcd4ff;
+    }
+
+    .service:hover::after {
+      transform: scale(1.4);
     }
 
     .icon {
-      width: 62px;
-      height: 62px;
-      border-radius: 22px;
-      background: #eee7ff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 29px;
-      margin-bottom: 20px;
-    }
+      width: 65px;
+      height: 65px;
 
-    .service h3 {
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
-
-    .service p {
-      color: #777486;
-      font-size: 14px;
-    }
-
-    /* FEATURES */
-
-    .features {
-      background: #17132b;
-      color: white;
-    }
-
-    .features-grid {
       display: grid;
-      grid-template-columns: repeat(2,1fr);
-      gap: 20px;
-    }
+      place-items: center;
 
-    .feature {
-      padding: 25px;
-      border-radius: 28px;
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.08);
-    }
+      border-radius: 22px;
 
-    .feature h3 {
-      margin-bottom: 7px;
-    }
+      background:
+        linear-gradient(
+          135deg,
+          #eee9ff,
+          #f7efff
+        );
 
-    .feature p {
-      color: #bbb5cd;
-      font-size: 14px;
-    }
+      color: var(--purple);
 
-    /* ORDER */
+      font-size: 25px;
 
-    .order-box {
-      background: linear-gradient(135deg,#7137e8,#4d25bd);
-      color: white;
-      padding: 55px 35px;
-      border-radius: 45px;
-      text-align: center;
-      box-shadow: 0 30px 60px rgba(90,35,200,.25);
-    }
-
-    .order-box h2 {
-      font-size: 35px;
-      margin-bottom: 15px;
-    }
-
-    .order-box p {
-      color: #eee8ff;
       margin-bottom: 25px;
     }
 
-    .order-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
+    .service h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
     }
 
-    .whatsapp {
-      background: #25d366;
+    .service p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       PLATFORMS
+    ========================== */
+
+    .platforms {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 18px;
+    }
+
+    .platform {
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: 30px;
+
+      padding: 28px;
+
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      transition: .3s;
+
+      box-shadow: 0 10px 40px rgba(30,20,80,.05);
+    }
+
+    .platform:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .platform-icon {
+      flex: 0 0 65px;
+
+      width: 65px;
+      height: 65px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 22px;
+
       color: white;
+
+      font-size: 27px;
     }
 
     .rubika {
-      background: #ffffff;
-      color: #5c2cd3;
+      background: linear-gradient(135deg,#6841ff,#4e8cff);
     }
 
-    /* FAQ */
+    .telegram {
+      background: linear-gradient(135deg,#249bd7,#31b7ed);
+    }
+
+    .whatsapp {
+      background: linear-gradient(135deg,#18b96d,#35d98a);
+    }
+
+    .platform h3 {
+      margin-bottom: 5px;
+    }
+
+    .platform p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================
+       PROCESS
+    ========================== */
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 15px;
+    }
+
+    .step {
+      background: white;
+
+      border-radius: 28px;
+
+      border: 1px solid var(--border);
+
+      padding: 25px;
+
+      position: relative;
+    }
+
+    .step-number {
+      width: 45px;
+      height: 45px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 15px;
+
+      background: #eeeaff;
+      color: var(--purple);
+
+      font-weight: 900;
+
+      margin-bottom: 20px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================
+       SEO CONTENT
+    ========================== */
+
+    .seo-box {
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: 35px;
+
+      padding: 40px;
+
+      box-shadow: var(--shadow);
+    }
+
+    .seo-box h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .seo-box h3 {
+      margin-top: 25px;
+      margin-bottom: 8px;
+      font-size: 19px;
+    }
+
+    .seo-box p {
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    /* =========================
+       CTA
+    ========================== */
+
+    .cta {
+      position: relative;
+
+      background:
+        linear-gradient(
+          135deg,
+          #17102d,
+          #3d1c73
+        );
+
+      color: white;
+
+      border-radius: 40px;
+
+      padding: 60px 45px;
+
+      overflow: hidden;
+    }
+
+    .cta::before {
+      content: "";
+
+      position: absolute;
+
+      width: 300px;
+      height: 300px;
+
+      border-radius: 50%;
+
+      background: rgba(188,62,255,.22);
+
+      filter: blur(60px);
+
+      left: -100px;
+      top: -100px;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 2;
+
+      max-width: 720px;
+    }
+
+    .cta h2 {
+      font-size: clamp(28px,4vw,44px);
+      line-height: 1.4;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: #d9d1e9;
+      margin-bottom: 25px;
+    }
+
+    /* =========================
+       FAQ
+    ========================== */
 
     .faq {
-      max-width: 850px;
-      margin: auto;
+      display: grid;
+      gap: 12px;
     }
 
     details {
       background: white;
-      margin-bottom: 14px;
-      padding: 20px 24px;
-      border-radius: 25px;
-      border: 1px solid #eeeaf5;
+
+      border: 1px solid var(--border);
+
+      border-radius: 22px;
+
+      padding: 20px 25px;
     }
 
     summary {
       cursor: pointer;
-      font-weight: bold;
+      font-weight: 800;
     }
 
     details p {
-      color: #777486;
-      margin-top: 12px;
+      color: var(--muted);
+      padding-top: 15px;
       font-size: 14px;
     }
 
-    /* FOOTER */
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .contact-card {
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: 30px;
+
+      padding: 30px;
+
+      box-shadow: var(--shadow);
+    }
+
+    .contact-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .contact-button {
+      padding: 13px 18px;
+
+      border-radius: 17px;
+
+      font-weight: 800;
+
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-button.whatsapp {
+      background: #e7fff3;
+      color: #119c5b;
+    }
+
+    .contact-button.rubika {
+      background: #eeeaff;
+      color: var(--purple);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
 
     footer {
-      background: #11101d;
+      background: #171329;
+
       color: white;
-      padding: 50px 0 25px;
+
+      margin-top: 100px;
+
+      padding: 60px 20px 30px;
     }
 
-    .footer-grid {
+    .footer-inner {
+      width: min(1180px,100%);
+      margin: auto;
+
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-columns: 1.5fr 1fr 1fr;
       gap: 40px;
-    }
-
-    footer p,
-    footer a {
-      color: #aaa5b7;
-      font-size: 14px;
     }
 
     footer h3 {
       margin-bottom: 15px;
     }
 
-    .copyright {
-      text-align: center;
-      border-top: 1px solid #292638;
-      margin-top: 35px;
-      padding-top: 20px;
-      color: #777184;
-      font-size: 13px;
+    footer p,
+    footer a {
+      color: #aaa5ba;
+      font-size: 14px;
     }
 
-    /* MOBILE */
+    footer a {
+      display: block;
+      margin-bottom: 8px;
+    }
 
-    @media (max-width: 850px) {
+    footer a:hover {
+      color: white;
+    }
+
+    .copyright {
+      width: min(1180px,100%);
+      margin: 40px auto 0;
+
+      padding-top: 20px;
+
+      border-top: 1px solid rgba(255,255,255,.08);
+
+      color: #777286;
+
+      font-size: 12px;
+    }
+
+    /* =========================
+       FLOATING CONTACT
+    ========================== */
+
+    .floating-contact {
+      position: fixed;
+
+      left: 18px;
+      bottom: 18px;
+
+      z-index: 999;
+
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      background: white;
+
+      padding: 8px;
+
+      border-radius: 25px;
+
+      box-shadow:
+        0 15px 45px rgba(0,0,0,.16);
+
+      border: 1px solid var(--border);
+    }
+
+    .floating-contact a {
+      width: 48px;
+      height: 48px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 17px;
+
+      color: white;
+
+      font-size: 20px;
+    }
+
+    .floating-wa {
+      background: #20c978;
+    }
+
+    .floating-rubika {
+      background: linear-gradient(135deg,#6d3df5,#477cff);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 900px) {
 
       .nav-links {
         display: none;
       }
 
+      .menu-btn {
+        display: grid;
+        place-items: center;
+      }
+
       .hero {
-        padding-top: 55px;
-      }
-
-      .hero-grid {
         grid-template-columns: 1fr;
-      }
-
-      .robot-card {
-        min-height: 330px;
-      }
-
-      .services {
-        grid-template-columns: 1fr;
-      }
-
-      .features-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .section-title h2 {
-        font-size: 29px;
+        text-align: center;
       }
 
       .hero p {
-        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
       }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .robot-area {
+        min-height: 470px;
+      }
+
+      .services,
+      .platforms {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .process {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 600px) {
 
-      .container {
-        width: 90%;
+      header {
+        top: 8px;
+        margin-top: 8px;
+      }
+
+      .nav {
+        min-height: 67px;
+        padding: 9px 12px;
+      }
+
+      .brand {
+        font-size: 18px;
+      }
+
+      .brand-logo {
+        width: 43px;
+        height: 43px;
+        border-radius: 15px;
+      }
+
+      .header-cta {
+        display: none;
+      }
+
+      .hero {
+        margin-top: 35px;
       }
 
       .hero h1 {
-        font-size: 34px;
+        font-size: 39px;
       }
 
-      .btn {
-        width: 100%;
+      .hero p {
+        font-size: 15px;
       }
 
-      .hero-buttons {
-        flex-direction: column;
+      .robot {
+        width: 285px;
+        height: 270px;
+        border-radius: 75px 75px 95px 95px;
       }
 
-      .order-box {
-        padding: 40px 20px;
-        border-radius: 32px;
+      .robot-screen {
+        left: 28px;
+        right: 28px;
+        top: 30px;
+        height: 135px;
+        border-radius: 50px;
       }
 
-      .order-box h2 {
-        font-size: 27px;
+      .eye {
+        top: 45px;
+        width: 28px;
+        height: 53px;
       }
+
+      .eye.left {
+        left: 78px;
+      }
+
+      .eye.right {
+        right: 78px;
+      }
+
+      .brand-badge {
+        width: 100px;
+        height: 65px;
+        border-radius: 22px;
+        font-size: 29px;
+      }
+
+      .label-one {
+        right: -5px;
+        top: 70px;
+      }
+
+      .label-two {
+        left: -5px;
+        top: 190px;
+      }
+
+      .label-three {
+        right: 0;
+        bottom: 25px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .services,
+      .platforms,
+      .process {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        margin-bottom: 70px;
+      }
+
+      .seo-box {
+        padding: 25px;
+      }
+
+      .cta {
+        padding: 40px 25px;
+        border-radius: 30px;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .floating-contact {
+        left: 12px;
+        bottom: 12px;
+      }
+
     }
+
   </style>
 </head>
 
 <body>
 
-<header>
-  <div class="container nav">
+<!-- =========================
+     HEADER
+========================= -->
 
-    <div class="logo">
-      🤖 <span>ربات</span> کسب‌وکار
+<header>
+
+  <nav class="nav">
+
+    <a href="#top" class="brand">
+
+      <span class="brand-logo">
+        <i class="fa-solid fa-robot"></i>
+      </span>
+
+      <span>
+        رباتیکا
+        <small>راهکار هوشمند کسب‌وکار</small>
+      </span>
+
+    </a>
+
+    <div class="nav-links">
+
+      <a href="#services">خدمات</a>
+      <a href="#platforms">پلتفرم‌ها</a>
+      <a href="#process">مراحل سفارش</a>
+      <a href="#faq">سؤالات</a>
+      <a href="#contact">ارتباط</a>
+
     </div>
 
-    <nav class="nav-links">
-      <a href="#services">خدمات</a>
-      <a href="#features">امکانات</a>
-      <a href="#faq">سوالات</a>
-      <a href="#contact">تماس</a>
-      <a class="nav-btn" href="#order">سفارش ربات</a>
-    </nav>
+    <a class="header-cta"
+       href="https://wa.me/989917163319"
+       target="_blank">
 
-  </div>
+      <i class="fa-brands fa-whatsapp"></i>
+      سفارش ربات
+
+    </a>
+
+    <button class="menu-btn"
+            onclick="toggleMenu()">
+
+      <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+  </nav>
+
 </header>
 
 
-<main>
+<main id="top">
 
-  <!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
-  <section class="hero">
+<section class="hero">
 
-    <div class="container hero-grid">
+  <div class="hero-text">
+
+    <span class="badge">
+      <i class="fa-solid fa-bolt"></i>
+      ساخت ربات اختصاصی برای کسب‌وکار
+    </span>
+
+    <h1>
+
+      کسب‌وکار خودت را
+      <br>
+
+      با یک
+      <span class="gradient-text">
+        ربات حرفه‌ای
+      </span>
+      هوشمند کن.
+
+    </h1>
+
+    <p>
+
+      طراحی و ساخت ربات حرفه‌ای برای روبیکا،
+      واتساپ و تلگرام؛
+      مناسب فروشگاه‌ها، خدمات، پشتیبانی،
+      سفارش‌گیری و پاسخگویی خودکار.
+
+    </p>
+
+    <div class="buttons">
+
+      <a class="btn btn-primary"
+         href="#contact">
+
+        <i class="fa-solid fa-robot"></i>
+
+        سفارش ساخت ربات
+
+      </a>
+
+      <a class="btn btn-outline"
+         href="#services">
+
+        مشاهده خدمات
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="robot-area">
+
+    <div class="robot-glow"></div>
+
+    <span class="robot-label label-one">
+      🤖 ربات فروشگاهی
+    </span>
+
+    <span class="robot-label label-two">
+      ⚡ مدیریت سریع
+    </span>
+
+    <span class="robot-label label-three">
+      💬 پاسخگویی خودکار
+    </span>
+
+    <div class="robot">
+
+      <div class="robot-screen">
+
+        <span class="eye left"></span>
+        <span class="eye right"></span>
+
+      </div>
+
+      <div class="brand-badge">
+        <i class="fa-solid fa-robot"></i>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<section class="stats">
+
+  <div class="stat">
+
+    <i class="fa-solid fa-robot"></i>
+
+    <strong>اختصاصی</strong>
+
+    <span>
+      طراحی متناسب با نیاز شما
+    </span>
+
+  </div>
+
+  <div class="stat">
+
+    <i class="fa-solid fa-bolt"></i>
+
+    <strong>خودکار</strong>
+
+    <span>
+      پاسخگویی و مدیریت سریع
+    </span>
+
+  </div>
+
+  <div class="stat">
+
+    <i class="fa-solid fa-mobile-screen"></i>
+
+    <strong>موبایل + دسکتاپ</strong>
+
+    <span>
+      طراحی کاملاً واکنش‌گرا
+    </span>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="section"
+         id="services">
+
+  <div class="section-head">
+
+    <span class="mini">
+      خدمات رباتیکا
+    </span>
+
+    <h2>
+      یک ربات، چندین راه برای رشد کسب‌وکار
+    </h2>
+
+    <p>
+      ربات شما می‌تواند بخش بزرگی از کارهای تکراری
+      کسب‌وکار را به‌صورت خودکار انجام دهد.
+    </p>
+
+  </div>
+
+
+  <div class="services">
+
+    <article class="service">
+
+      <div class="icon">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+
+      <h3>
+        ربات فروش و سفارش
+      </h3>
+
+      <p>
+        معرفی محصولات، دریافت سفارش،
+        ثبت اطلاعات مشتری و هدایت کاربر
+        برای خرید سریع‌تر.
+      </p>
+
+    </article>
+
+
+    <article class="service">
+
+      <div class="icon">
+        <i class="fa-solid fa-headset"></i>
+      </div>
+
+      <h3>
+        ربات پشتیبانی
+      </h3>
+
+      <p>
+        پاسخگویی خودکار به سؤالات متداول
+        و راهنمایی مشتریان در تمام ساعات.
+      </p>
+
+    </article>
+
+
+    <article class="service">
+
+      <div class="icon">
+        <i class="fa-solid fa-comments"></i>
+      </div>
+
+      <h3>
+        پاسخگویی هوشمند
+      </h3>
+
+      <p>
+        طراحی سناریوهای گفت‌وگو برای
+        ارتباط سریع‌تر و حرفه‌ای‌تر با مشتری.
+      </p>
+
+    </article>
+
+
+    <article class="service">
+
+      <div class="icon">
+        <i class="fa-solid fa-box"></i>
+      </div>
+
+      <h3>
+        مدیریت سفارش‌ها
+      </h3>
+
+      <p>
+        دریافت اطلاعات سفارش و دسته‌بندی
+        درخواست‌های مشتریان.
+      </p>
+
+    </article>
+
+
+    <article class="service">
+
+      <div class="icon">
+        <i class="fa-solid fa-bullhorn"></i>
+      </div>
+
+      <h3>
+        تبلیغات و اطلاع‌رسانی
+      </h3>
+
+      <p>
+        ارسال پیام‌های اطلاع‌رسانی و معرفی
+        خدمات در سناریوهای مناسب.
+      </p>
+
+    </article>
+
+
+    <article class="service">
+
+      <div class="icon">
+        <i class="fa-solid fa-gears"></i>
+      </div>
+
+      <h3>
+        اتصال و توسعه اختصاصی
+      </h3>
+
+      <p>
+        امکان توسعه ربات بر اساس نیازهای
+        خاص و فرآیندهای کسب‌وکار شما.
+      </p>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PLATFORMS
+========================= -->
+
+<section class="section"
+         id="platforms">
+
+  <div class="section-head">
+
+    <span class="mini">
+      ربات برای پلتفرم‌های محبوب
+    </span>
+
+    <h2>
+      ربات شما هرجا که مشتری شماست
+    </h2>
+
+    <p>
+      ساخت راهکارهای رباتی برای پلتفرم‌های
+      پرکاربرد ارتباطی و فروش.
+    </p>
+
+  </div>
+
+
+  <div class="platforms">
+
+    <article class="platform">
+
+      <div class="platform-icon rubika">
+        <i class="fa-solid fa-robot"></i>
+      </div>
 
       <div>
 
-        <span class="badge">
-          🚀 طراحی و ساخت ربات اختصاصی
-        </span>
-
-        <h1>
-          کسب‌وکارت را با
-          <span>ربات هوشمند</span>
-          حرفه‌ای‌تر کن
-        </h1>
+        <h3>ربات روبیکا</h3>
 
         <p>
-          طراحی و ساخت ربات اختصاصی برای فروش، ثبت سفارش،
-          پاسخگویی خودکار، مدیریت مشتریان و خدمات آنلاین.
-          رباتی دقیقاً متناسب با نیاز کسب‌وکار شما.
+          مناسب فروش، پشتیبانی، سفارش و خدمات
+          اختصاصی در روبیکا.
         </p>
-
-        <div class="hero-buttons">
-
-          <a href="#order" class="btn btn-primary">
-            🤖 سفارش ساخت ربات
-          </a>
-
-          <a href="#services" class="btn btn-secondary">
-            مشاهده امکانات
-          </a>
-
-        </div>
 
       </div>
 
+    </article>
 
-      <div class="robot-card">
 
-        <div class="robot">
+    <article class="platform">
 
-          <div class="robot-face">
+      <div class="platform-icon telegram">
+        <i class="fa-brands fa-telegram"></i>
+      </div>
 
-            <div class="eye one"></div>
-            <div class="eye two"></div>
+      <div>
 
-            <div class="mouth"></div>
+        <h3>ربات تلگرام</h3>
 
-          </div>
+        <p>
+          طراحی ربات برای پاسخگویی،
+          فروش و مدیریت فرآیندهای تلگرامی.
+        </p>
 
-        </div>
+      </div>
 
-        <div class="robot-text">
-          ربات اختصاصی کسب‌وکار شما
-        </div>
+    </article>
+
+
+    <article class="platform">
+
+      <div class="platform-icon whatsapp">
+        <i class="fa-brands fa-whatsapp"></i>
+      </div>
+
+      <div>
+
+        <h3>ربات واتساپ</h3>
+
+        <p>
+          راهکارهای ارتباطی و پاسخگویی
+          برای ارتباط بهتر با مشتریان.
+        </p>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PROCESS
+========================= -->
+
+<section class="section"
+         id="process">
+
+  <div class="section-head">
+
+    <span class="mini">
+      فرآیند سفارش
+    </span>
+
+    <h2>
+      ساخت ربات در چند مرحله ساده
+    </h2>
+
+  </div>
+
+
+  <div class="process">
+
+    <div class="step">
+
+      <div class="step-number">
+        ۱
+      </div>
+
+      <h3>
+        ثبت درخواست
+      </h3>
+
+      <p>
+        نیاز خود را از طریق واتساپ یا روبیکا
+        برای ما ارسال کنید.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <div class="step-number">
+        ۲
+      </div>
+
+      <h3>
+        بررسی نیازها
+      </h3>
+
+      <p>
+        امکانات، منوها، نوع مشتری و فرآیند
+        کاری شما بررسی می‌شود.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <div class="step-number">
+        ۳
+      </div>
+
+      <h3>
+        طراحی ربات
+      </h3>
+
+      <p>
+        ساختار و ظاهر ربات بر اساس
+        نیاز کسب‌وکار طراحی می‌شود.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <div class="step-number">
+        ۴
+      </div>
+
+      <h3>
+        تحویل و راه‌اندازی
+      </h3>
+
+      <p>
+        پس از آماده‌سازی، ربات برای
+        استفاده شما آماده می‌شود.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     SEO CONTENT
+========================= -->
+
+<section class="section">
+
+  <div class="seo-box">
+
+    <h2>
+      چرا کسب‌وکارها به ربات نیاز دارند؟
+    </h2>
+
+    <p>
+      امروزه سرعت پاسخگویی به مشتری یکی از عوامل مهم
+      موفقیت کسب‌وکارهای آنلاین است. یک ربات حرفه‌ای
+      می‌تواند بسیاری از پرسش‌های تکراری مشتریان را
+      پاسخ دهد و فرآیند ثبت سفارش را ساده‌تر کند.
+    </p>
+
+    <h3>
+      ساخت ربات روبیکا برای فروشگاه‌ها
+    </h3>
+
+    <p>
+      اگر در روبیکا فعالیت می‌کنید، می‌توان یک ربات
+      اختصاصی برای معرفی خدمات، محصولات، دریافت
+      سفارش و پاسخگویی مشتریان طراحی کرد.
+    </p>
+
+    <h3>
+      ربات فروشگاهی چه کاری انجام می‌دهد؟
+    </h3>
+
+    <p>
+      ربات فروشگاهی می‌تواند منوهای مختلفی مانند
+      مشاهده محصولات، ثبت سفارش، ارتباط با پشتیبانی،
+      مشاهده اطلاعات و دریافت درخواست مشتری را
+      در اختیار کاربر قرار دهد.
+    </p>
+
+    <h3>
+      ربات برای کسب‌وکارهای خدماتی
+    </h3>
+
+    <p>
+      کسب‌وکارهای خدماتی نیز می‌توانند از ربات برای
+      معرفی خدمات، دریافت درخواست مشتری، پاسخ به
+      سؤالات متداول و مدیریت ارتباط با مخاطبان استفاده کنند.
+    </p>
+
+    <h3>
+      ربات واتساپ و تلگرام
+    </h3>
+
+    <p>
+      برای کسب‌وکارهایی که مشتریان آن‌ها از واتساپ
+      یا تلگرام استفاده می‌کنند، می‌توان راهکارهای
+      ارتباطی و سناریوهای پاسخگویی متناسب با نیاز
+      کسب‌وکار طراحی کرد.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section class="section"
+         id="faq">
+
+  <div class="section-head">
+
+    <span class="mini">
+      پرسش‌های متداول
+    </span>
+
+    <h2>
+      قبل از سفارش ربات این‌ها را بدانید
+    </h2>
+
+  </div>
+
+
+  <div class="faq">
+
+    <details>
+
+      <summary>
+        آیا ربات کاملاً اختصاصی طراحی می‌شود؟
+      </summary>
+
+      <p>
+        بله. ساختار ربات می‌تواند بر اساس نوع
+        کسب‌وکار، خدمات، محصولات و فرآیند موردنیاز
+        شما طراحی شود.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        ربات برای چه کسب‌وکارهایی مناسب است؟
+      </summary>
+
+      <p>
+        فروشگاه‌های اینترنتی، فروشندگان محصولات،
+        خدمات‌دهندگان، پشتیبانی، تبلیغات و بسیاری
+        از کسب‌وکارهای آنلاین می‌توانند از ربات استفاده کنند.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        آیا ظاهر ربات هم قابل شخصی‌سازی است؟
+      </summary>
+
+      <p>
+        بله. منوها، متن‌ها، دسته‌بندی‌ها و سناریوهای
+        ارتباطی می‌توانند متناسب با برند و کسب‌وکار تنظیم شوند.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        چگونه سفارش ساخت ربات ثبت کنم؟
+      </summary>
+
+      <p>
+        کافی است از طریق واتساپ یا روبیکا پیام بدهید
+        و توضیح دهید چه نوع رباتی نیاز دارید.
+      </p>
+
+    </details>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="section"
+         id="contact">
+
+  <div class="cta">
+
+    <div class="cta-content">
+
+      <h2>
+        آماده‌ای کسب‌وکارت را هوشمندتر کنی؟
+      </h2>
+
+      <p>
+        نوع ربات، امکانات موردنیاز و حوزه فعالیتت را
+        بفرست تا درباره ساخت ربات مناسب کسب‌وکارت صحبت کنیم.
+      </p>
+
+      <div class="buttons">
+
+        <a class="btn btn-primary"
+           href="https://wa.me/989917163319"
+           target="_blank">
+
+          <i class="fa-brands fa-whatsapp"></i>
+
+          سفارش در واتساپ
+
+        </a>
+
+        <a class="btn btn-outline"
+           style="color:#17142a"
+           href="https://rubika.ir/"
+           target="_blank">
+
+          <i class="fa-solid fa-paper-plane"></i>
+
+          ارتباط در روبیکا
+
+        </a>
 
       </div>
 
     </div>
 
-  </section>
+  </div>
 
-
-  <!-- SERVICES -->
-
-  <section id="services">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <h2>خدمات ساخت ربات</h2>
-
-        <p>
-          هر چیزی که برای هوشمندتر شدن کسب‌وکارت نیاز داری
-        </p>
-
-      </div>
-
-
-      <div class="services">
-
-        <div class="service">
-
-          <div class="icon">🛒</div>
-
-          <h3>ربات فروشگاهی</h3>
-
-          <p>
-            نمایش محصولات، معرفی خدمات، ثبت سفارش
-            و مدیریت فرآیند خرید مشتری.
-          </p>
-
-        </div>
-
-
-        <div class="service">
-
-          <div class="icon">📦</div>
-
-          <h3>ربات ثبت سفارش</h3>
-
-          <p>
-            مشتری سفارش خود را مرحله‌به‌مرحله ثبت می‌کند
-            و اطلاعات برای شما ارسال می‌شود.
-          </p>
-
-        </div>
-
-
-        <div class="service">
-
-          <div class="icon">💬</div>
-
-          <h3>پاسخگویی خودکار</h3>
-
-          <p>
-            پاسخ سریع به سوالات پرتکرار مشتریان
-            بدون نیاز به پاسخگویی دستی.
-          </p>
-
-        </div>
-
-
-        <div class="service">
-
-          <div class="icon">👥</div>
-
-          <h3>مدیریت کاربران</h3>
-
-          <p>
-            مدیریت مشتریان، اطلاعات کاربران
-            و دسترسی‌های مختلف.
-          </p>
-
-        </div>
-
-
-        <div class="service">
-
-          <div class="icon">💳</div>
-
-          <h3>پرداخت و سفارش</h3>
-
-          <p>
-            طراحی فرآیند پرداخت و ثبت وضعیت سفارش
-            متناسب با نیاز سیستم.
-          </p>
-
-        </div>
-
-
-        <div class="service">
-
-          <div class="icon">📊</div>
-
-          <h3>گزارش‌گیری</h3>
-
-          <p>
-            نمایش و مدیریت اطلاعات سفارش‌ها،
-            کاربران و فعالیت‌های سیستم.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- FEATURES -->
-
-  <section id="features" class="features">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <h2>چرا ربات اختصاصی؟</h2>
-
-        <p>
-          یک سیستم آماده همیشه پاسخگوی نیاز کسب‌وکار شما نیست.
-        </p>
-
-      </div>
-
-
-      <div class="features-grid">
-
-        <div class="feature">
-
-          <h3>⚡ سرعت بیشتر</h3>
-
-          <p>
-            بسیاری از کارهای تکراری به‌صورت خودکار انجام می‌شوند.
-          </p>
-
-        </div>
-
-
-        <div class="feature">
-
-          <h3>🤖 پاسخگویی خودکار</h3>
-
-          <p>
-            مشتریان می‌توانند در هر ساعت با سیستم شما ارتباط بگیرند.
-          </p>
-
-        </div>
-
-
-        <div class="feature">
-
-          <h3>🎯 کاملاً اختصاصی</h3>
-
-          <p>
-            امکانات ربات بر اساس نیاز و مدل کسب‌وکار شما طراحی می‌شود.
-          </p>
-
-        </div>
-
-
-        <div class="feature">
-
-          <h3>📈 قابل توسعه</h3>
-
-          <p>
-            در آینده می‌توان امکانات جدید به سیستم اضافه کرد.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ORDER -->
-
-  <section id="order">
-
-    <div class="container">
-
-      <div class="order-box">
-
-        <h2>
-          آماده‌ای ربات خودت را داشته باشی؟
-        </h2>
-
-        <p>
-          برای مشاوره و بررسی ایده رباتت همین الان پیام بده.
-        </p>
-
-        <div class="order-buttons">
-
-          <a
-            class="btn whatsapp"
-            href="https://wa.me/989917163319"
-            target="_blank">
-            💬 سفارش در واتساپ
-          </a>
-
-          <a
-            class="btn rubika"
-            href="https://rubika.ir/09917163319"
-            target="_blank">
-            🟣 پیام در روبیکا
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- FAQ -->
-
-  <section id="faq">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <h2>سوالات متداول</h2>
-
-        <p>
-          پاسخ چند سوال مهم درباره ساخت ربات
-        </p>
-
-      </div>
-
-
-      <div class="faq">
-
-        <details>
-
-          <summary>
-            ربات برای چه کسب‌وکارهایی مناسب است؟
-          </summary>
-
-          <p>
-            فروشگاه‌ها، کسب‌وکارهای خدماتی، کانال‌ها،
-            آموزشگاه‌ها، تبلیغات و بسیاری از کسب‌وکارهای دیگر.
-          </p>
-
-        </details>
-
-
-        <details>
-
-          <summary>
-            آیا ربات کاملاً اختصاصی ساخته می‌شود؟
-          </summary>
-
-          <p>
-            بله. امکانات ربات بر اساس نیاز و فرآیند کاری
-            کسب‌وکار شما طراحی می‌شود.
-          </p>
-
-        </details>
-
-
-        <details>
-
-          <summary>
-            آیا بعداً می‌توان امکانات بیشتری اضافه کرد؟
-          </summary>
-
-          <p>
-            بله. ساختار ربات می‌تواند قابل توسعه باشد
-            و امکانات جدید در آینده اضافه شود.
-          </p>
-
-        </details>
-
-
-        <details>
-
-          <summary>
-            برای سفارش چه اطلاعاتی لازم است؟
-          </summary>
-
-          <p>
-            کافی است نوع کسب‌وکار، ایده ربات و امکاناتی
-            که در ذهن دارید را برای ما ارسال کنید.
-          </p>
-
-        </details>
-
-      </div>
-
-    </div>
-
-  </section>
+</section>
 
 </main>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
-<footer id="contact">
+<footer>
 
-  <div class="container">
+  <div class="footer-inner">
 
-    <div class="footer-grid">
+    <div>
 
-      <div>
+      <div class="brand">
 
-        <h3>🤖 ربات کسب‌وکار</h3>
+        <span class="brand-logo">
+          <i class="fa-solid fa-robot"></i>
+        </span>
 
-        <p>
-          طراحی و ساخت ربات‌های اختصاصی برای
-          فروش، سفارش، پاسخگویی و مدیریت کسب‌وکار.
-        </p>
-
-      </div>
-
-
-      <div>
-
-        <h3>دسترسی سریع</h3>
-
-        <p><a href="#services">خدمات</a></p>
-        <p><a href="#features">امکانات</a></p>
-        <p><a href="#faq">سوالات متداول</a></p>
+        <span>
+          رباتیکا
+          <small style="color:#aaa5ba">
+            راهکار هوشمند کسب‌وکار
+          </small>
+        </span>
 
       </div>
 
-
-      <div>
-
-        <h3>ارتباط با ما</h3>
-
-        <p>
-          واتساپ: ۰۹۹۱۷۱۶۳۳۱۹
-        </p>
-
-        <p>
-          روبیکا: ۰۹۹۱۷۱۶۳۳۱۹
-        </p>
-
-      </div>
+      <p style="margin-top:20px">
+        طراحی و ساخت ربات حرفه‌ای برای روبیکا،
+        واتساپ و تلگرام با تمرکز بر فروش،
+        پشتیبانی و اتوماسیون کسب‌وکار.
+      </p>
 
     </div>
 
 
-    <div class="copyright">
+    <div>
 
-      © 2026 تمامی حقوق محفوظ است.
+      <h3>
+        دسترسی سریع
+      </h3>
+
+      <a href="#services">خدمات ربات</a>
+      <a href="#platforms">پلتفرم‌ها</a>
+      <a href="#process">مراحل سفارش</a>
+      <a href="#faq">سؤالات متداول</a>
 
     </div>
+
+
+    <div>
+
+      <h3>
+        ارتباط با ما
+      </h3>
+
+      <a href="https://wa.me/989917163319"
+         target="_blank">
+
+        <i class="fa-brands fa-whatsapp"></i>
+        واتساپ: ۰۹۹۱۷۱۶۳۳۱۹
+
+      </a>
+
+      <a href="https://rubika.ir/"
+         target="_blank">
+
+        <i class="fa-solid fa-paper-plane"></i>
+        روبیکا
+
+      </a>
+
+      <a href="#contact">
+        <i class="fa-solid fa-robot"></i>
+        سفارش ساخت ربات
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="copyright">
+
+    © تمامی حقوق این وب‌سایت برای رباتیکا محفوظ است.
 
   </div>
 
 </footer>
 
+
+<!-- =========================
+     FLOATING CONTACT
+========================= -->
+
+<div class="floating-contact">
+
+  <a class="floating-wa"
+     href="https://wa.me/989917163319"
+     target="_blank"
+     aria-label="واتساپ">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+  </a>
+
+  <a class="floating-rubika"
+     href="https://rubika.ir/"
+     target="_blank"
+     aria-label="روبیکا">
+
+    <i class="fa-solid fa-paper-plane"></i>
+
+  </a>
+
+</div>
+
+
+<script>
+
+  function toggleMenu() {
+
+    const links =
+      document.querySelector(".nav-links");
+
+    if (links.style.display === "flex") {
+
+      links.style.display = "none";
+
+    } else {
+
+      links.style.display = "flex";
+
+      links.style.position = "absolute";
+      links.style.top = "75px";
+      links.style.right = "10px";
+      links.style.left = "10px";
+
+      links.style.padding = "15px";
+
+      links.style.background = "white";
+
+      links.style.borderRadius = "25px";
+
+      links.style.flexDirection = "column";
+
+      links.style.boxShadow =
+        "0 20px 50px rgba(0,0,0,.12)";
+
+    }
+
+  }
+
+</script>
+
 </body>
-          </html>
+  </html>
