@@ -4,15 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>سفارش ساخت ربات حرفه‌ای | BotPro</title>
+<title>سفارش ساخت ربات حرفه‌ای | روبیکا، تلگرام و واتساپ</title>
 
-<meta name="description" content="سفارش ساخت ربات حرفه‌ای برای روبیکا، تلگرام و واتساپ؛ ربات فروشگاهی، ثبت سفارش، پشتیبانی و خدمات اختصاصی.">
+<meta name="description" content="سفارش ساخت ربات حرفه‌ای روبیکا، تلگرام و واتساپ برای فروشگاه‌ها، کسب‌وکارها و خدمات آنلاین. طراحی ربات فروشگاهی، ثبت سفارش، پشتیبانی، پاسخگویی خودکار و ربات اختصاصی.">
+
+<meta name="keywords" content="ساخت ربات روبیکا, سفارش ربات روبیکا, ساخت ربات تلگرام, ساخت ربات واتساپ, ربات فروشگاهی, ربات ثبت سفارش, ربات پشتیبانی, ربات اختصاصی, طراحی ربات حرفه ای">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#7139ee">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -26,7 +32,7 @@ html{
 body{
     font-family:"Vazirmatn",sans-serif;
     background:#fff;
-    color:#171522;
+    color:#191526;
     overflow-x:hidden;
 }
 
@@ -35,32 +41,41 @@ a{
     color:inherit;
 }
 
-button,input,select,textarea{
+button,
+input,
+select,
+textarea{
     font-family:inherit;
 }
 
-/* ---------- Header ---------- */
+.container{
+    width:min(1160px,calc(100% - 30px));
+    margin:auto;
+}
+
+/* ================= HEADER ================= */
 
 .header{
-    width:min(1180px,calc(100% - 30px));
+    width:min(1160px,calc(100% - 30px));
     margin:18px auto;
-    padding:12px 18px;
+    padding:12px 17px;
     border:1px solid #eeeaf5;
     border-radius:28px;
     background:rgba(255,255,255,.96);
-    box-shadow:0 12px 40px rgba(45,25,90,.07);
+    box-shadow:0 12px 40px rgba(48,25,95,.07);
     display:flex;
     align-items:center;
     justify-content:space-between;
     position:sticky;
     top:12px;
     z-index:1000;
+    backdrop-filter:blur(15px);
 }
 
 .logo{
     display:flex;
     align-items:center;
-    gap:10px;
+    gap:11px;
 }
 
 .logo-icon{
@@ -70,9 +85,9 @@ button,input,select,textarea{
     display:flex;
     align-items:center;
     justify-content:center;
-    background:linear-gradient(135deg,#7d36f5,#4168ff);
-    font-size:29px;
-    box-shadow:0 10px 25px rgba(104,60,240,.2);
+    font-size:28px;
+    background:linear-gradient(135deg,#8735f5,#4767ff);
+    box-shadow:0 10px 25px rgba(103,56,235,.22);
 }
 
 .logo-text strong{
@@ -82,60 +97,73 @@ button,input,select,textarea{
 }
 
 .logo-text span{
-    color:#888391;
+    color:#8a8492;
     font-size:11px;
 }
 
 .nav{
     display:flex;
-    gap:6px;
+    align-items:center;
+    gap:4px;
 }
 
 .nav a{
     padding:11px 15px;
     border-radius:17px;
-    color:#5e5969;
+    color:#625d6c;
     font-size:14px;
     transition:.3s;
 }
 
 .nav a:hover{
-    background:#f2eaff;
-    color:#7139e9;
+    color:#7139ee;
+    background:#f3edff;
 }
 
 .nav .active{
     color:#fff;
-    background:linear-gradient(135deg,#8732f4,#6043ef);
+    background:linear-gradient(135deg,#8433f4,#5b45ef);
 }
 
-/* ---------- Hero ---------- */
+/* ================= HERO ================= */
 
 .hero{
-    width:min(1180px,calc(100% - 30px));
-    margin:70px auto 90px;
+    padding:80px 0 90px;
     display:grid;
     grid-template-columns:1fr 1fr;
     align-items:center;
-    gap:60px;
+    gap:65px;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:9px 15px;
+    border-radius:30px;
+    color:#7139ee;
+    background:#f4efff;
+    font-size:13px;
+    font-weight:800;
 }
 
 .hero h1{
-    font-size:clamp(38px,5vw,68px);
-    line-height:1.3;
+    margin-top:20px;
+    font-size:clamp(38px,5vw,67px);
+    line-height:1.35;
     font-weight:900;
 }
 
 .hero h1 span{
-    color:#7638ed;
+    color:#7539ed;
 }
 
-.hero p{
-    margin-top:22px;
+.hero-text{
+    margin-top:20px;
+    color:#77717f;
+    line-height:2.25;
+    font-size:16px;
     max-width:650px;
-    color:#77727f;
-    line-height:2.2;
-    font-size:17px;
 }
 
 .hero-buttons{
@@ -150,17 +178,18 @@ button,input,select,textarea{
     align-items:center;
     justify-content:center;
     gap:8px;
-    padding:15px 25px;
-    border-radius:20px;
+    min-height:54px;
+    padding:14px 25px;
     border:0;
+    border-radius:20px;
     cursor:pointer;
     font-weight:800;
-    transition:.3s;
+    transition:.35s;
 }
 
 .primary{
     color:#fff;
-    background:linear-gradient(135deg,#8633f5,#5c43ef);
+    background:linear-gradient(135deg,#8735f5,#5e43ef);
     box-shadow:0 14px 30px rgba(105,55,235,.22);
 }
 
@@ -170,55 +199,51 @@ button,input,select,textarea{
 }
 
 .secondary{
+    color:#403b4b;
     background:#fff;
     border:1px solid #e5e0ec;
-    color:#403b4a;
 }
 
 .secondary:hover{
     transform:translateY(-4px);
-    border-color:#cbb6fa;
+    border-color:#cdb8fa;
 }
 
-/* ---------- Robot ---------- */
+/* ================= ROBOT ================= */
 
 .robot-area{
-    min-height:430px;
+    min-height:450px;
     position:relative;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
 }
 
 .robot-glow{
     position:absolute;
-    width:300px;
-    height:300px;
+    width:310px;
+    height:310px;
     border-radius:50%;
-    background:rgba(119,60,240,.09);
-    filter:blur(50px);
+    background:rgba(116,58,238,.10);
+    filter:blur(55px);
 }
 
 .robot{
     width:300px;
     height:300px;
-    border-radius:85px;
-    background:linear-gradient(145deg,#fff,#f1edff);
+    border-radius:82px;
+    background:linear-gradient(145deg,#fff,#f0ebff);
     box-shadow:0 30px 70px rgba(53,30,100,.14);
+    position:relative;
     display:flex;
     align-items:center;
     justify-content:center;
-    position:relative;
-    animation:robotFloat 4s ease-in-out infinite;
+    animation:robotFloat 4.2s ease-in-out infinite;
 }
 
 @keyframes robotFloat{
-    0%,100%{
-        transform:translateY(0);
-    }
-    50%{
-        transform:translateY(-12px);
-    }
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-13px)}
 }
 
 .face{
@@ -230,84 +255,77 @@ button,input,select,textarea{
 }
 
 .eye{
-    width:30px;
-    height:44px;
-    background:#fff;
-    border-radius:20px;
     position:absolute;
     top:50px;
+    width:30px;
+    height:44px;
+    border-radius:20px;
+    background:#fff;
 }
 
-.eye.left{
-    right:53px;
-}
-
-.eye.right{
-    left:53px;
-}
+.eye.left{right:53px}
+.eye.right{left:53px}
 
 .mouth{
     position:absolute;
-    width:68px;
-    height:24px;
-    border-radius:20px;
-    background:#8b3df5;
     bottom:27px;
     left:50%;
     transform:translateX(-50%);
+    width:68px;
+    height:23px;
+    border-radius:20px;
+    background:#873bf4;
 }
 
 .brand-badge{
     position:absolute;
-    width:78px;
-    height:78px;
-    border-radius:25px;
     bottom:-28px;
     left:50%;
     transform:translateX(-50%);
-    background:linear-gradient(135deg,#713df2,#4367ff);
+    width:78px;
+    height:78px;
+    border-radius:25px;
     display:flex;
     align-items:center;
     justify-content:center;
     font-size:38px;
+    background:linear-gradient(135deg,#713df2,#4367ff);
     box-shadow:0 15px 30px rgba(75,50,220,.28);
 }
-
-/* فقط آیکن‌های شناور حرکت می‌کنند */
 
 .float-icon{
     position:absolute;
     width:58px;
     height:58px;
     border-radius:20px;
-    background:#fff;
-    border:1px solid #eee8f7;
-    box-shadow:0 12px 30px rgba(50,30,90,.09);
     display:flex;
     align-items:center;
     justify-content:center;
     font-size:25px;
+    background:#fff;
+    border:1px solid #eee8f7;
+    box-shadow:0 12px 30px rgba(50,30,90,.09);
 }
 
 .icon1{
     top:45px;
-    right:20px;
-    animation:iconMove 3.5s ease-in-out infinite;
+    right:15px;
+    animation:floatIcon 3.5s ease-in-out infinite;
 }
 
 .icon2{
-    left:15px;
-    top:170px;
-    animation:iconMove 4s ease-in-out infinite .5s;
+    top:180px;
+    left:5px;
+    animation:floatIcon 4s ease-in-out infinite .5s;
 }
 
 .icon3{
-    right:55px;
-    bottom:30px;
-    animation:iconMove 3.8s ease-in-out infinite 1s;
+    right:50px;
+    bottom:25px;
+    animation:floatIcon 3.8s ease-in-out infinite 1s;
 }
 
-@keyframes iconMove{
+@keyframes floatIcon{
     0%,100%{
         transform:translateY(0) rotate(0);
     }
@@ -316,37 +334,36 @@ button,input,select,textarea{
     }
 }
 
-/* ---------- Section ---------- */
+/* ================= SECTION ================= */
 
 .section{
-    width:min(1100px,calc(100% - 30px));
-    margin:0 auto 90px;
+    padding:80px 0;
 }
 
-.title{
+.section-title{
     text-align:center;
-    margin-bottom:40px;
+    margin-bottom:42px;
 }
 
-.title small{
-    color:#7c3eed;
+.section-title small{
+    color:#783ced;
     font-weight:800;
 }
 
-.title h2{
+.section-title h2{
     margin-top:8px;
-    font-size:clamp(28px,4vw,44px);
+    font-size:clamp(28px,4vw,43px);
     font-weight:900;
 }
 
-.title p{
-    color:#85808d;
+.section-title p{
     margin:12px auto 0;
-    max-width:700px;
-    line-height:2;
+    max-width:720px;
+    color:#817b88;
+    line-height:2.15;
 }
 
-/* ---------- Platform ---------- */
+/* ================= PLATFORMS ================= */
 
 .platforms{
     display:grid;
@@ -355,11 +372,11 @@ button,input,select,textarea{
 }
 
 .platform{
-    background:#fff;
-    border:2px solid #eeeaf4;
-    border-radius:27px;
-    padding:27px 20px;
+    padding:28px 20px;
     text-align:center;
+    border:2px solid #eeeaf4;
+    border-radius:28px;
+    background:#fff;
     cursor:pointer;
     transition:.35s;
 }
@@ -370,21 +387,21 @@ button,input,select,textarea{
 }
 
 .platform.active{
-    border-color:#7e3ff0;
+    border-color:#7c3ff0;
     background:#faf7ff;
     box-shadow:0 15px 35px rgba(100,50,220,.12);
 }
 
 .platform-icon{
-    width:68px;
-    height:68px;
-    border-radius:22px;
-    background:#f0e8ff;
+    width:70px;
+    height:70px;
+    margin:0 auto 15px;
+    border-radius:23px;
     display:flex;
     align-items:center;
     justify-content:center;
-    margin:0 auto 14px;
     font-size:32px;
+    background:#f0e8ff;
     transition:.3s;
 }
 
@@ -394,23 +411,23 @@ button,input,select,textarea{
 }
 
 .platform h3{
-    font-size:18px;
+    font-size:19px;
 }
 
 .platform p{
-    color:#88838f;
-    font-size:13px;
     margin-top:7px;
+    color:#88828f;
+    font-size:13px;
 }
 
-/* ---------- Form ---------- */
+/* ================= FORM ================= */
 
 .form-box{
     margin-top:25px;
-    background:#fff;
+    padding:38px;
     border:1px solid #eeeaf4;
-    border-radius:34px;
-    padding:35px;
+    border-radius:35px;
+    background:#fff;
     box-shadow:0 22px 60px rgba(45,25,90,.07);
 }
 
@@ -449,7 +466,7 @@ button,input,select,textarea{
 }
 
 .field textarea{
-    min-height:140px;
+    min-height:145px;
     resize:vertical;
 }
 
@@ -475,96 +492,248 @@ button,input,select,textarea{
     line-height:2;
 }
 
-/* ---------- Features ---------- */
+/* ================= QUICK INFO ================= */
 
-.features{
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.info-card{
+    padding:25px 18px;
+    text-align:center;
+    border:1px solid #eeeaf4;
+    border-radius:25px;
+    background:#fff;
+    transition:.35s;
+}
+
+.info-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 40px rgba(55,30,100,.08);
+}
+
+.info-card .icon{
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.info-card strong{
+    display:block;
+    font-size:16px;
+}
+
+.info-card span{
+    display:block;
+    margin-top:6px;
+    color:#85808f;
+    font-size:12px;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:18px;
 }
 
-.feature{
-    background:#fff;
+.service{
+    padding:28px;
     border:1px solid #eeeaf4;
-    border-radius:27px;
-    padding:27px;
-    transition:.3s;
+    border-radius:28px;
+    background:#fff;
+    transition:.35s;
 }
 
-.feature:hover{
-    transform:translateY(-6px);
-    box-shadow:0 18px 40px rgba(55,30,100,.08);
+.service:hover{
+    transform:translateY(-7px);
+    box-shadow:0 20px 45px rgba(55,30,100,.08);
 }
 
-.feature-icon{
-    width:55px;
-    height:55px;
-    border-radius:18px;
-    background:#f0e8ff;
+.service-icon{
+    width:58px;
+    height:58px;
+    border-radius:19px;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:25px;
-    margin-bottom:15px;
+    font-size:26px;
+    background:#f0e8ff;
+    margin-bottom:17px;
 }
 
-.feature h3{
+.service h3{
     font-size:18px;
 }
 
-.feature p{
-    color:#817c89;
-    line-height:2;
+.service p{
+    margin-top:9px;
+    color:#817b89;
     font-size:14px;
-    margin-top:8px;
+    line-height:2.1;
 }
 
-/* ---------- SEO ---------- */
+/* ================= BUSINESS ================= */
 
-.seo{
-    width:min(1000px,calc(100% - 30px));
-    margin:0 auto 90px;
-    padding:40px;
-    background:#fff;
+.business-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.business{
+    padding:24px 15px;
+    border-radius:23px;
+    background:#faf8fd;
     border:1px solid #eeeaf4;
-    border-radius:32px;
+    text-align:center;
+    transition:.3s;
 }
 
-.seo h2{
+.business:hover{
+    transform:scale(1.03);
+    background:#f6f0ff;
+}
+
+.business-icon{
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+.business strong{
+    font-size:14px;
+}
+
+/* ================= STEPS ================= */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.step{
+    position:relative;
+    padding:28px 20px;
+    border:1px solid #eeeaf4;
+    border-radius:27px;
+    background:#fff;
+    text-align:center;
+}
+
+.step-number{
+    width:45px;
+    height:45px;
+    margin:0 auto 15px;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-weight:900;
+    background:linear-gradient(135deg,#8735f5,#5e43ef);
+    box-shadow:0 10px 22px rgba(105,55,235,.18);
+}
+
+.step h3{
+    font-size:16px;
+}
+
+.step p{
+    margin-top:8px;
+    color:#827c8b;
+    font-size:13px;
+    line-height:2;
+}
+
+/* ================= SEO CONTENT ================= */
+
+.seo-box{
+    padding:42px;
+    border-radius:34px;
+    border:1px solid #eeeaf4;
+    background:linear-gradient(145deg,#fff,#faf8ff);
+}
+
+.seo-box h2{
     font-size:30px;
     margin-bottom:18px;
 }
 
-.seo h3{
-    margin-top:25px;
-    margin-bottom:8px;
+.seo-box h3{
+    margin-top:28px;
+    margin-bottom:9px;
+    font-size:20px;
 }
 
-.seo p{
-    color:#706b78;
-    line-height:2.2;
+.seo-box p{
+    color:#706a79;
+    line-height:2.3;
     font-size:15px;
 }
 
-/* ---------- Contact ---------- */
+/* ================= FAQ ================= */
+
+.faq{
+    max-width:900px;
+    margin:auto;
+}
+
+details{
+    margin-bottom:12px;
+    padding:19px 22px;
+    border:1px solid #eeeaf4;
+    border-radius:21px;
+    background:#fff;
+    transition:.3s;
+}
+
+details[open]{
+    border-color:#d6c2fa;
+    box-shadow:0 12px 30px rgba(55,30,100,.06);
+}
+
+summary{
+    cursor:pointer;
+    font-weight:800;
+    list-style:none;
+}
+
+summary::-webkit-details-marker{
+    display:none;
+}
+
+details p{
+    padding-top:13px;
+    color:#77717f;
+    line-height:2.15;
+    font-size:14px;
+}
+
+/* ================= CTA ================= */
 
 .contact{
+    margin:80px auto;
+    padding:45px 25px;
     width:min(900px,calc(100% - 30px));
-    margin:0 auto 90px;
-    padding:38px;
     text-align:center;
-    border-radius:34px;
+    border-radius:36px;
     color:#fff;
-    background:linear-gradient(135deg,#18132e,#29154e);
+    background:linear-gradient(135deg,#18132e,#2c1754);
+    box-shadow:0 25px 65px rgba(31,15,60,.18);
 }
 
 .contact h2{
-    font-size:30px;
+    font-size:32px;
 }
 
 .contact p{
-    color:#c8c0d7;
-    margin:12px 0 25px;
+    margin:12px auto 25px;
+    max-width:650px;
+    color:#c7bfd5;
+    line-height:2;
 }
 
 .contact-buttons{
@@ -575,7 +744,7 @@ button,input,select,textarea{
 }
 
 .contact-btn{
-    padding:14px 24px;
+    padding:14px 25px;
     border-radius:19px;
     font-weight:800;
     transition:.3s;
@@ -590,23 +759,23 @@ button,input,select,textarea{
 }
 
 .rubika{
-    background:#7044ed;
+    background:#7144ed;
 }
 
-/* ---------- Footer ---------- */
+/* ================= FOOTER ================= */
 
 footer{
-    background:#171327;
+    padding:55px 20px 25px;
     color:#fff;
-    padding:50px 20px 25px;
+    background:#171327;
 }
 
 .footer{
     width:min(1100px,100%);
     margin:auto;
     display:grid;
-    grid-template-columns:1.2fr 1fr 1fr;
-    gap:35px;
+    grid-template-columns:1.3fr 1fr 1fr;
+    gap:40px;
 }
 
 footer h3{
@@ -625,6 +794,15 @@ footer a{
     flex-direction:column;
 }
 
+.links a{
+    transition:.25s;
+}
+
+.links a:hover{
+    color:#fff;
+    transform:translateX(-4px);
+}
+
 .copyright{
     width:min(1100px,100%);
     margin:30px auto 0;
@@ -635,9 +813,9 @@ footer a{
     font-size:12px;
 }
 
-/* ---------- Mobile ---------- */
+/* ================= MOBILE ================= */
 
-@media(max-width:850px){
+@media(max-width:900px){
 
     .nav{
         display:none;
@@ -648,7 +826,7 @@ footer a{
         text-align:center;
     }
 
-    .hero p{
+    .hero-text{
         margin-left:auto;
         margin-right:auto;
     }
@@ -658,8 +836,20 @@ footer a{
     }
 
     .platforms,
-    .features{
+    .services{
         grid-template-columns:1fr;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .business-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .steps{
+        grid-template-columns:1fr 1fr;
     }
 
     .footer{
@@ -675,7 +865,7 @@ footer a{
 @media(max-width:600px){
 
     .hero{
-        margin-top:45px;
+        padding-top:50px;
     }
 
     .hero h1{
@@ -694,8 +884,7 @@ footer a{
     }
 
     .form-box,
-    .seo,
-    .contact{
+    .seo-box{
         padding:25px 18px;
         border-radius:27px;
     }
@@ -718,11 +907,25 @@ footer a{
         width:100%;
     }
 
+    .info-grid,
+    .business-grid,
+    .steps{
+        grid-template-columns:1fr;
+    }
+
+    .contact{
+        padding:35px 18px;
+        border-radius:28px;
+    }
+
 }
+
 </style>
 </head>
 
 <body>
+
+<!-- ================= HEADER ================= -->
 
 <header class="header">
 
@@ -732,7 +935,7 @@ footer a{
 
         <div class="logo-text">
             <strong>BotPro</strong>
-            <span>ربات‌های حرفه‌ای</span>
+            <span>ربات‌های حرفه‌ای و اختصاصی</span>
         </div>
 
     </a>
@@ -740,19 +943,31 @@ footer a{
     <nav class="nav">
 
         <a href="index.html">خانه</a>
+
         <a href="services.html">خدمات</a>
+
         <a href="order.html" class="active">سفارش ساخت</a>
+
         <a href="about.html">درباره ما</a>
-        <a href="contact.html">تماس</a>
+
+        <a href="contact.html">تماس با ما</a>
 
     </nav>
 
 </header>
 
 
-<section class="hero">
+<main>
+
+<!-- ================= HERO ================= -->
+
+<section class="container hero">
 
     <div>
+
+        <span class="badge">
+            ✨ طراحی اختصاصی ربات
+        </span>
 
         <h1>
             ربات حرفه‌ای خودت را
@@ -760,20 +975,22 @@ footer a{
             <span>سفارش بده</span>
         </h1>
 
-        <p>
-            برای کسب‌وکار خود یک ربات اختصاصی برای روبیکا، تلگرام یا واتساپ
-            سفارش دهید. از ربات فروشگاهی و ثبت سفارش تا پشتیبانی و
-            اتوماسیون ارتباط با مشتری، راهکار متناسب با نیاز شما طراحی می‌شود.
+        <p class="hero-text">
+            اگر می‌خواهید فرآیند فروش، ثبت سفارش، پاسخگویی و ارتباط
+            با مشتریان خود را هوشمندتر و سریع‌تر کنید، یک ربات اختصاصی
+            می‌تواند راهکار مناسبی برای کسب‌وکار شما باشد.
+            ما امکان طراحی ربات برای روبیکا، تلگرام و واتساپ را
+            متناسب با نیاز شما فراهم می‌کنیم.
         </p>
 
         <div class="hero-buttons">
 
-            <a href="#order" class="btn primary">
+            <a href="#order-form" class="btn primary">
                 🚀 شروع سفارش
             </a>
 
-            <a href="services.html" class="btn secondary">
-                🧩 مشاهده خدمات
+            <a href="#services" class="btn secondary">
+                🧩 امکانات ربات
             </a>
 
         </div>
@@ -786,7 +1003,9 @@ footer a{
         <div class="robot-glow"></div>
 
         <div class="float-icon icon1">🛒</div>
+
         <div class="float-icon icon2">💬</div>
+
         <div class="float-icon icon3">⚡</div>
 
         <div class="robot">
@@ -794,6 +1013,7 @@ footer a{
             <div class="face">
 
                 <div class="eye left"></div>
+
                 <div class="eye right"></div>
 
                 <div class="mouth"></div>
@@ -811,18 +1031,67 @@ footer a{
 </section>
 
 
-<section class="section" id="order">
+<!-- ================= QUICK INFO ================= -->
 
-    <div class="title">
+<section class="container section">
 
-        <small>انتخاب پلتفرم</small>
+    <div class="section-title">
 
-        <h2>
-            ربات را برای کجا می‌خواهید؟
-        </h2>
+        <small>سفارش اختصاصی</small>
+
+        <h2>یک ربات برای نیاز واقعی شما</h2>
 
         <p>
-            یکی از پلتفرم‌های زیر را انتخاب کنید.
+            از یک ربات ساده برای پاسخگویی تا یک سیستم کامل برای
+            ثبت سفارش و مدیریت ارتباط با مشتری.
+        </p>
+
+    </div>
+
+
+    <div class="info-grid">
+
+        <div class="info-card">
+            <div class="icon">🤖</div>
+            <strong>طراحی اختصاصی</strong>
+            <span>متناسب با نیاز پروژه</span>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">⚡</div>
+            <strong>سریع و کاربردی</strong>
+            <span>ساده برای استفاده کاربران</span>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">📱</div>
+            <strong>چند پلتفرمی</strong>
+            <span>روبیکا، تلگرام و واتساپ</span>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">🔧</div>
+            <strong>قابل توسعه</strong>
+            <span>امکان افزودن امکانات جدید</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PLATFORM ================= -->
+
+<section class="container section" id="order-form">
+
+    <div class="section-title">
+
+        <small>مرحله اول</small>
+
+        <h2>پلتفرم موردنظر را انتخاب کنید</h2>
+
+        <p>
+            ابتدا مشخص کنید ربات شما برای کدام پلتفرم ساخته شود.
         </p>
 
     </div>
@@ -837,7 +1106,9 @@ footer a{
 
             <h3>ربات روبیکا</h3>
 
-            <p>فروش، سفارش و پشتیبانی</p>
+            <p>
+                فروش، سفارش، پشتیبانی و خدمات
+            </p>
 
         </div>
 
@@ -849,7 +1120,9 @@ footer a{
 
             <h3>ربات تلگرام</h3>
 
-            <p>مدیریت و اتوماسیون</p>
+            <p>
+                مدیریت، اطلاع‌رسانی و اتوماسیون
+            </p>
 
         </div>
 
@@ -861,7 +1134,9 @@ footer a{
 
             <h3>ربات واتساپ</h3>
 
-            <p>ارتباط و پاسخگویی</p>
+            <p>
+                ارتباط و پاسخگویی به مشتریان
+            </p>
 
         </div>
 
@@ -872,18 +1147,25 @@ footer a{
 
         <form onsubmit="sendOrder(event)">
 
-            <input type="hidden" id="platform" value="روبیکا">
+            <input
+                type="hidden"
+                id="platform"
+                value="روبیکا"
+            >
+
 
             <div class="grid">
 
                 <div class="field">
 
-                    <label>نام شما</label>
+                    <label>
+                        نام و نام خانوادگی
+                    </label>
 
                     <input
                         id="name"
                         type="text"
-                        placeholder="نام و نام خانوادگی"
+                        placeholder="نام خود را وارد کنید"
                         required
                     >
 
@@ -892,7 +1174,9 @@ footer a{
 
                 <div class="field">
 
-                    <label>شماره تماس</label>
+                    <label>
+                        شماره تماس
+                    </label>
 
                     <input
                         id="phone"
@@ -906,15 +1190,26 @@ footer a{
 
                 <div class="field">
 
-                    <label>نوع کسب‌وکار</label>
+                    <label>
+                        زمینه فعالیت
+                    </label>
 
                     <select id="business">
 
-                        <option>فروشگاه</option>
+                        <option>فروشگاه اینترنتی</option>
+
+                        <option>فروشگاه فیزیکی</option>
+
                         <option>خدماتی</option>
+
                         <option>آموزشی</option>
+
                         <option>شرکت</option>
+
+                        <option>کانال یا رسانه</option>
+
                         <option>تولید محتوا</option>
+
                         <option>سایر</option>
 
                     </select>
@@ -924,15 +1219,26 @@ footer a{
 
                 <div class="field">
 
-                    <label>نوع ربات</label>
+                    <label>
+                        نوع ربات
+                    </label>
 
                     <select id="bot">
 
                         <option>ربات فروشگاهی</option>
+
                         <option>ربات ثبت سفارش</option>
+
                         <option>ربات پشتیبانی</option>
-                        <option>ربات تبلیغاتی</option>
+
+                        <option>ربات پاسخگویی خودکار</option>
+
+                        <option>ربات اطلاع‌رسانی</option>
+
                         <option>ربات مدیریت مشتری</option>
+
+                        <option>ربات تبلیغاتی</option>
+
                         <option>ربات اختصاصی</option>
 
                     </select>
@@ -942,11 +1248,13 @@ footer a{
 
                 <div class="field full">
 
-                    <label>توضیحات و امکانات موردنیاز</label>
+                    <label>
+                        امکانات و توضیحات پروژه
+                    </label>
 
                     <textarea
                         id="details"
-                        placeholder="امکاناتی که برای ربات نیاز دارید را بنویسید..."
+                        placeholder="مثلاً: ثبت سفارش، نمایش محصولات، پاسخگویی خودکار، منوی ربات، مدیریت کاربران و..."
                         required
                     ></textarea>
 
@@ -959,16 +1267,19 @@ footer a{
 
                 <div class="note">
 
-                    🔒 اطلاعات شما فقط برای بررسی سفارش استفاده می‌شود.
+                    🔒 اطلاعات شما برای بررسی درخواست استفاده می‌شود.
 
                     <br>
 
-                    پس از ثبت درخواست برای هماهنگی با شما ارتباط می‌گیریم.
+                    بعد از ارسال، برای هماهنگی سفارش با شما ارتباط می‌گیریم.
 
                 </div>
 
-                <button class="btn primary" type="submit">
-                    🚀 ارسال درخواست
+                <button
+                    class="btn primary"
+                    type="submit"
+                >
+                    🚀 ارسال درخواست سفارش
                 </button>
 
             </div>
@@ -980,100 +1291,104 @@ footer a{
 </section>
 
 
-<section class="section">
+<!-- ================= SERVICES ================= -->
 
-    <div class="title">
+<section class="container section" id="services">
 
-        <small>امکانات</small>
+    <div class="section-title">
 
-        <h2>
-            چه چیزی می‌توانیم برای شما بسازیم؟
-        </h2>
+        <small>امکانات قابل سفارش</small>
+
+        <h2>ربات شما چه کارهایی می‌تواند انجام دهد؟</h2>
+
+        <p>
+            امکانات ربات بر اساس نوع کسب‌وکار و هدف پروژه قابل انتخاب و توسعه هستند.
+        </p>
 
     </div>
 
 
-    <div class="features">
+    <div class="services">
 
-        <article class="feature">
+        <article class="service">
 
-            <div class="feature-icon">🛒</div>
+            <div class="service-icon">🛒</div>
 
             <h3>ربات فروشگاهی</h3>
 
             <p>
-                معرفی محصولات، دریافت سفارش، نمایش اطلاعات و مدیریت
-                فرآیند خرید مشتری.
+                معرفی محصولات، نمایش مشخصات، دریافت سفارش و
+                ایجاد یک مسیر ساده برای خرید و ارتباط با مشتری.
             </p>
 
         </article>
 
 
-        <article class="feature">
+        <article class="service">
 
-            <div class="feature-icon">💬</div>
+            <div class="service-icon">📦</div>
+
+            <h3>ربات ثبت سفارش</h3>
+
+            <p>
+                دریافت اطلاعات مشتری و سفارش به صورت مرحله‌ای
+                و منظم برای کاهش خطا و سرعت بخشیدن به فرآیند فروش.
+            </p>
+
+        </article>
+
+
+        <article class="service">
+
+            <div class="service-icon">💬</div>
 
             <h3>ربات پشتیبانی</h3>
 
             <p>
-                پاسخگویی به سوالات متداول و راهنمایی کاربران به شکل
-                سریع و منظم.
+                پاسخگویی خودکار به سوالات متداول و هدایت کاربر
+                به بخش مناسب یا پشتیبان.
             </p>
 
         </article>
 
 
-        <article class="feature">
+        <article class="service">
 
-            <div class="feature-icon">📦</div>
+            <div class="service-icon">🔔</div>
 
-            <h3>ثبت سفارش</h3>
+            <h3>اطلاع‌رسانی خودکار</h3>
 
             <p>
-                طراحی فرآیند اختصاصی برای دریافت اطلاعات سفارش و
-                مدیریت درخواست‌های مشتریان.
+                ارسال پیام‌های اطلاع‌رسانی، اخبار، وضعیت سفارش
+                و محتوای موردنیاز کاربران.
             </p>
 
         </article>
 
 
-        <article class="feature">
+        <article class="service">
 
-            <div class="feature-icon">🔔</div>
+            <div class="service-icon">👥</div>
 
-            <h3>پیام خودکار</h3>
+            <h3>مدیریت کاربران</h3>
 
             <p>
-                ارسال پیام‌های خودکار برای اطلاع‌رسانی و پیگیری
-                فرآیندهای مختلف.
+                ایجاد مسیرهای مختلف برای کاربران و سازمان‌دهی
+                بهتر ارتباط با مخاطبان.
             </p>
 
         </article>
 
 
-        <article class="feature">
+        <article class="service">
 
-            <div class="feature-icon">📊</div>
+            <div class="service-icon">⚙️</div>
 
-            <h3>مدیریت مشتری</h3>
-
-            <p>
-                کمک به نظم‌دهی ارتباط با مشتریان و ساده‌تر شدن
-                فرآیندهای روزانه.
-            </p>
-
-        </article>
-
-
-        <article class="feature">
-
-            <div class="feature-icon">⚙️</div>
-
-            <h3>طراحی اختصاصی</h3>
+            <h3>ربات اختصاصی</h3>
 
             <p>
-                امکانات ربات بر اساس نیاز واقعی کسب‌وکار شما
-                طراحی و قابل توسعه خواهد بود.
+                اگر ایده خاصی دارید، ساختار ربات می‌تواند بر اساس
+                فرآیند اختصاصی کسب‌وکار شما طراحی شود.
             </p>
 
         </article>
@@ -1083,57 +1398,344 @@ footer a{
 </section>
 
 
-<section class="seo">
+<!-- ================= BUSINESS TYPES ================= -->
 
-    <h2>
-        سفارش ساخت ربات حرفه‌ای
-    </h2>
+<section class="container section">
 
-    <p>
-        ربات‌های حرفه‌ای می‌توانند بخش زیادی از فرآیند ارتباط با مشتری،
-        ثبت سفارش، معرفی محصولات و پاسخگویی را ساده‌تر کنند. در BotPro
-        امکان طراحی ربات اختصاصی برای روبیکا، تلگرام و واتساپ وجود دارد.
-    </p>
+    <div class="section-title">
 
-    <h3>
-        ساخت ربات روبیکا
-    </h3>
+        <small>کاربردها</small>
 
-    <p>
-        ربات روبیکا می‌تواند برای فروشگاه‌ها، کسب‌وکارهای خدماتی،
-        کانال‌ها و مجموعه‌های مختلف برای ثبت سفارش، ارائه خدمات،
-        پاسخگویی و مدیریت کاربران طراحی شود.
-    </p>
+        <h2>ربات برای چه کسب‌وکارهایی مناسب است؟</h2>
 
-    <h3>
-        ساخت ربات تلگرام
-    </h3>
+        <p>
+            ربات می‌تواند برای بسیاری از کسب‌وکارهای آنلاین و خدماتی
+            به عنوان یک ابزار ارتباطی و اتوماسیون استفاده شود.
+        </p>
 
-    <p>
-        ربات تلگرام برای اتوماسیون، پشتیبانی، مدیریت کاربران،
-        اطلاع‌رسانی و بسیاری از فرآیندهای آنلاین کاربرد دارد.
-    </p>
+    </div>
 
-    <h3>
-        ساخت ربات واتساپ
-    </h3>
 
-    <p>
-        ربات‌های واتساپ می‌توانند در ارتباط با مشتری، پاسخگویی،
-        اطلاع‌رسانی و ساده‌تر کردن فرآیندهای ارتباطی کسب‌وکار استفاده شوند.
-    </p>
+    <div class="business-grid">
+
+        <div class="business">
+            <div class="business-icon">🛍️</div>
+            <strong>فروشگاه‌ها</strong>
+        </div>
+
+        <div class="business">
+            <div class="business-icon">🎓</div>
+            <strong>آموزشگاه‌ها</strong>
+        </div>
+
+        <div class="business">
+            <div class="business-icon">🏢</div>
+            <strong>شرکت‌ها</strong>
+        </div>
+
+        <div class="business">
+            <div class="business-icon">📣</div>
+            <strong>رسانه‌ها</strong>
+        </div>
+
+        <div class="business">
+            <div class="business-icon">💼</div>
+            <strong>کسب‌وکارهای خدماتی</strong>
+        </div>
+
+        <div class="business">
+            <div class="business-icon">🎨</div>
+            <strong>تولیدکنندگان محتوا</strong>
+        </div>
+
+        <div class="business">
+            <div class="business-icon">🍔</div>
+            <strong>رستوران و کافه</strong>
+        </div>
+
+        <div class="business">
+            <div class="business-icon">🚀</div>
+            <strong>استارتاپ‌ها</strong>
+        </div>
+
+    </div>
 
 </section>
 
 
+<!-- ================= STEPS ================= -->
+
+<section class="container section">
+
+    <div class="section-title">
+
+        <small>فرآیند سفارش</small>
+
+        <h2>ساخت ربات چگونه انجام می‌شود؟</h2>
+
+        <p>
+            روند سفارش به صورت مرحله‌ای انجام می‌شود تا نیاز پروژه
+            قبل از شروع کار مشخص باشد.
+        </p>
+
+    </div>
+
+
+    <div class="steps">
+
+        <div class="step">
+
+            <div class="step-number">۱</div>
+
+            <h3>ثبت درخواست</h3>
+
+            <p>
+                اطلاعات اولیه و امکانات موردنظر خود را ارسال می‌کنید.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">۲</div>
+
+            <h3>بررسی نیازها</h3>
+
+            <p>
+                نیازهای پروژه و ساختار مناسب ربات بررسی می‌شود.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">۳</div>
+
+            <h3>طراحی و ساخت</h3>
+
+            <p>
+                ساختار ربات بر اساس امکانات و هدف پروژه آماده می‌شود.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">۴</div>
+
+            <h3>تحویل و توسعه</h3>
+
+            <p>
+                پس از آماده شدن، امکان توسعه و افزودن امکانات جدید وجود دارد.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SEO CONTENT ================= -->
+
+<section class="container section">
+
+    <div class="seo-box">
+
+        <h2>
+            سفارش ساخت ربات حرفه‌ای برای کسب‌وکار
+        </h2>
+
+        <p>
+            امروزه بسیاری از کسب‌وکارها برای پاسخگویی سریع‌تر به مشتریان،
+            دریافت سفارش و مدیریت ارتباط با کاربران از ربات‌های هوشمند
+            و خودکار استفاده می‌کنند. یک ربات مناسب می‌تواند بخشی از
+            کارهای تکراری را ساده‌تر کند و مسیر ارتباط مشتری با کسب‌وکار
+            را کوتاه‌تر و منظم‌تر کند.
+        </p>
+
+
+        <h3>
+            ساخت ربات روبیکا
+        </h3>
+
+        <p>
+            ربات روبیکا می‌تواند برای فروشگاه‌ها، کانال‌ها، مجموعه‌های
+            خدماتی و کسب‌وکارهای مختلف طراحی شود. امکاناتی مانند منوی
+            اختصاصی، معرفی خدمات، ثبت سفارش، پاسخگویی، اطلاع‌رسانی و
+            مدیریت مسیر کاربران می‌توانند در ساختار ربات قرار بگیرند.
+        </p>
+
+
+        <h3>
+            ساخت ربات تلگرام
+        </h3>
+
+        <p>
+            ربات تلگرام یکی از ابزارهای کاربردی برای اتوماسیون ارتباط
+            با کاربران است. بسته به نیاز پروژه می‌توان قابلیت‌هایی
+            مانند منوی ربات، پاسخگویی خودکار، ثبت اطلاعات، اطلاع‌رسانی،
+            مدیریت کاربران و فرآیندهای اختصاصی را برای آن در نظر گرفت.
+        </p>
+
+
+        <h3>
+            ساخت ربات واتساپ
+        </h3>
+
+        <p>
+            ربات واتساپ می‌تواند برای بهبود ارتباط با مشتری و ساده‌تر
+            کردن فرآیندهای پاسخگویی و اطلاع‌رسانی مورد استفاده قرار گیرد.
+            ساختار دقیق امکانات بر اساس نوع کسب‌وکار و فرآیند موردنظر
+            تعیین می‌شود.
+        </p>
+
+
+        <h3>
+            ربات فروشگاهی و ثبت سفارش
+        </h3>
+
+        <p>
+            یکی از کاربردهای مهم ربات‌ها، ایجاد مسیر ساده برای معرفی
+            محصولات و دریافت سفارش است. ربات می‌تواند اطلاعات موردنیاز
+            مشتری را مرحله‌به‌مرحله دریافت کند و تجربه‌ای منظم‌تر برای
+            ثبت درخواست ایجاد کند.
+        </p>
+
+
+        <h3>
+            چرا ربات اختصاصی؟
+        </h3>
+
+        <p>
+            هر کسب‌وکار فرآیند متفاوتی دارد. به همین دلیل یک ربات
+            اختصاصی می‌تواند بر اساس نیاز واقعی پروژه طراحی شود و
+            در آینده نیز قابلیت توسعه داشته باشد. به جای امکانات
+            غیرضروری، ساختار ربات بر روی نیازهای اصلی کاربران متمرکز می‌شود.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FAQ ================= -->
+
+<section class="container section">
+
+    <div class="section-title">
+
+        <small>سوالات متداول</small>
+
+        <h2>قبل از سفارش شاید این سوال‌ها را داشته باشید</h2>
+
+    </div>
+
+
+    <div class="faq">
+
+        <details>
+
+            <summary>
+                آیا امکان ساخت ربات برای روبیکا وجود دارد؟
+            </summary>
+
+            <p>
+                بله، امکان طراحی ساختار ربات روبیکا بر اساس نیاز پروژه
+                و امکانات موردنظر وجود دارد.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                آیا ربات برای تلگرام و واتساپ هم ساخته می‌شود؟
+            </summary>
+
+            <p>
+                بله، در این سایت خدمات ساخت و طراحی ربات برای روبیکا،
+                تلگرام و واتساپ در نظر گرفته شده است.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                آیا می‌توانم امکانات خاص خودم را درخواست کنم؟
+            </summary>
+
+            <p>
+                بله. هنگام ثبت سفارش می‌توانید امکانات و ایده خود را
+                در بخش توضیحات بنویسید تا ساختار مناسب برای آن بررسی شود.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                آیا ربات فروشگاهی قابل ساخت است؟
+            </summary>
+
+            <p>
+                بله. ربات فروشگاهی می‌تواند برای معرفی محصولات،
+                دریافت اطلاعات مشتری و ثبت درخواست یا سفارش طراحی شود.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                بعداً می‌توان امکانات جدید به ربات اضافه کرد؟
+            </summary>
+
+            <p>
+                ساختار پروژه می‌تواند به شکلی طراحی شود که در صورت نیاز
+                امکان توسعه و افزودن قابلیت‌های جدید وجود داشته باشد.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                چگونه سفارش خود را ثبت کنم؟
+            </summary>
+
+            <p>
+                فرم سفارش همین صفحه را تکمیل کنید. پس از ارسال درخواست،
+                اطلاعات برای بررسی و هماهنگی سفارش آماده خواهد بود.
+            </p>
+
+        </details>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
 <section class="contact">
 
     <h2>
-        برای سفارش آماده‌اید؟
+        ایده ربات خودت را داری؟
     </h2>
 
     <p>
-        اگر قبل از ثبت سفارش سؤال دارید، مستقیماً با ما در ارتباط باشید.
+        توضیح کوتاهی درباره کاری که می‌خواهی ربات انجام دهد بنویس
+        یا مستقیماً برای هماهنگی بیشتر با ما ارتباط بگیر.
     </p>
 
     <div class="contact-buttons">
@@ -1142,22 +1744,29 @@ footer a{
             class="contact-btn whatsapp"
             href="https://wa.me/989917163319"
             target="_blank"
+            rel="noopener"
         >
-            💬 واتساپ
+            💬 ارتباط در واتساپ
         </a>
+
 
         <a
             class="contact-btn rubika"
             href="https://rubika.ir/09917163319"
             target="_blank"
+            rel="noopener"
         >
-            🤖 روبیکا
+            🤖 ارتباط در روبیکا
         </a>
 
     </div>
 
 </section>
 
+</main>
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -1168,8 +1777,8 @@ footer a{
             <h3>🤖 BotPro</h3>
 
             <p>
-                طراحی و ساخت ربات حرفه‌ای برای روبیکا، تلگرام و واتساپ
-                با تمرکز بر نیاز کسب‌وکارها.
+                طراحی و ساخت ربات حرفه‌ای و اختصاصی برای روبیکا،
+                تلگرام و واتساپ با تمرکز بر نیاز کسب‌وکارها.
             </p>
 
         </div>
@@ -1182,9 +1791,13 @@ footer a{
             <div class="links">
 
                 <a href="index.html">خانه</a>
+
                 <a href="services.html">خدمات</a>
-                <a href="order.html">سفارش ساخت</a>
+
+                <a href="order.html">سفارش ساخت ربات</a>
+
                 <a href="about.html">درباره ما</a>
+
                 <a href="contact.html">تماس با ما</a>
 
             </div>
@@ -1194,14 +1807,19 @@ footer a{
 
         <div>
 
-            <h3>خدمات</h3>
+            <h3>خدمات ربات</h3>
 
             <div class="links">
 
+                <a href="services.html">ربات روبیکا</a>
+
+                <a href="services.html">ربات تلگرام</a>
+
+                <a href="services.html">ربات واتساپ</a>
+
                 <a href="services.html">ربات فروشگاهی</a>
-                <a href="services.html">ربات پشتیبانی</a>
+
                 <a href="services.html">ربات ثبت سفارش</a>
-                <a href="services.html">ربات اختصاصی</a>
 
             </div>
 
@@ -1224,12 +1842,15 @@ function choosePlatform(element,name){
     document
         .querySelectorAll(".platform")
         .forEach(function(item){
+
             item.classList.remove("active");
+
         });
 
     element.classList.add("active");
 
     document.getElementById("platform").value=name;
+
 }
 
 
@@ -1257,7 +1878,7 @@ function sendOrder(event){
 
 
     const message =
-`🤖 درخواست ساخت ربات BotPro
+`🤖 درخواست ساخت ربات
 
 👤 نام: ${name}
 
@@ -1265,9 +1886,9 @@ function sendOrder(event){
 
 📱 پلتفرم: ${platform}
 
-🏢 کسب‌وکار: ${business}
+🏢 زمینه فعالیت: ${business}
 
-🤖 نوع ربات: ${bot}
+⚙️ نوع ربات: ${bot}
 
 📝 امکانات موردنیاز:
 ${details}`;
@@ -1278,10 +1899,14 @@ ${details}`;
         + encodeURIComponent(message);
 
 
-    window.open(whatsapp,"_blank");
+    window.open(
+        whatsapp,
+        "_blank"
+    );
+
 }
 
 </script>
 
 </body>
-</html>
+    </html>
