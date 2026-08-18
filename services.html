@@ -1,1 +1,228 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>خدمات ساخت ربات روبیکا حرفه‌ای | BotPro</title>
+<meta name="description" content="خدمات طراحی و ساخت ربات حرفه‌ای روبیکا برای فروشگاه، پشتیبانی، ثبت سفارش، تبلیغات و مدیریت کسب‌وکار.">
+<meta name="keywords" content="ساخت ربات روبیکا, طراحی ربات روبیکا, ربات فروشگاهی روبیکا, ربات پشتیبانی روبیکا, ربات ثبت سفارش, ربات تبلیغاتی">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#fff;color:#171421;line-height:2}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:10px;z-index:20}
+.nav{margin-top:10px;padding:10px 16px;border:1px solid #eee;border-radius:40px;background:#fffffff2;box-shadow:0 12px 35px #32136b14;backdrop-filter:blur(18px);display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;gap:10px;align-items:center;font-weight:900;font-size:20px}
+.logo{width:50px;height:50px;border-radius:17px;display:grid;place-items:center;background:linear-gradient(135deg,#7c3aed,#2563eb);color:#fff;font-size:25px;box-shadow:0 0 30px #7c3aed33}
+.brand small{display:block;color:#777;font-size:10px;font-weight:400}
+.links{display:flex;gap:22px;color:#555;font-size:13px}
+.cta,.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:32px;padding:13px 24px;font-weight:800}
+.cta,.primary{color:#fff;background:linear-gradient(135deg,#7c3aed,#c026d3);box-shadow:0 12px 35px #a855f744}
+.btn{border:1px solid #e8e3ef;background:#fff}
+.hero{padding:90px 0 55px;text-align:center}
+.tag{display:inline-block;padding:7px 16px;border-radius:30px;background:#f1e9ff;border:1px solid #decaff;color:#6d28d9;font-size:12px}
+.hero h1{font-size:clamp(36px,6vw,64px);line-height:1.35;margin:20px 0 12px}
+.gradient{background:linear-gradient(90deg,#7c3aed,#c026d3,#2563eb);-webkit-background-clip:text;color:transparent}
+.hero p{color:#666;max-width:760px;margin:auto;font-size:17px}
+.buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:25px}
+section{padding:75px 0}
+.title{text-align:center;max-width:760px;margin:0 auto 42px}
+.title h2{font-size:clamp(29px,4vw,45px);margin:0 0 8px}
+.title p{color:#777}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{padding:30px;border:1px solid #eee;border-radius:32px;background:#fff;box-shadow:0 15px 45px #2910440b;transition:.25s}
+.card:hover{transform:translateY(-7px);box-shadow:0 22px 55px #29104416}
+.icon{width:60px;height:60px;border-radius:20px;display:grid;place-items:center;background:#f1e9ff;font-size:27px;margin-bottom:15px}
+.card h3{margin:5px 0 8px;font-size:21px}
+.card p{color:#777;font-size:14px;margin:0}
+.highlight{background:linear-gradient(135deg,#f7f2ff,#eef4ff);border-radius:45px}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.box{padding:32px;border:1px solid #eee;border-radius:32px;background:#fff;box-shadow:0 15px 45px #2910440b}
+.box ul{list-style:none;padding:0;margin:10px 0 0}
+.box li{padding:8px 0;color:#666}
+.box li:before{content:"✓";color:#7c3aed;font-weight:900;margin-left:9px}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{padding:25px;text-align:center;border:1px solid #eee;border-radius:30px;background:#fff;box-shadow:0 12px 35px #29104409}
+.num{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;margin:auto auto 12px;color:#fff;background:linear-gradient(135deg,#7c3aed,#2563eb);font-weight:900}
+.order{padding:55px 25px;text-align:center;border-radius:42px;background:linear-gradient(135deg,#171026,#2d1255);color:#fff;box-shadow:0 25px 70px #28104a33}
+.order p{color:#ddd}
+.contact{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:22px}
+.contact .btn{border-color:#ffffff30;background:#ffffff12;color:#fff}
+.contact .primary{border:0}
+.faq{max-width:850px;margin:auto}
+details{margin:12px 0;padding:18px 22px;border:1px solid #eee;border-radius:24px;background:#fff;box-shadow:0 8px 25px #29104408}
+summary{cursor:pointer;font-weight:800}
+details p{color:#777;font-size:14px}
+footer{margin-top:40px;padding:50px 0 25px;border-top:1px solid #eee;text-align:center;color:#777}
+.phone{color:#c026d3;font-weight:900;margin-top:12px}
+@media(max-width:850px){
+.links{display:none}
+.hero{padding:65px 0 35px}
+.hero p{font-size:15px}
+.cards,.features,.process{grid-template-columns:1fr}
+section{padding:60px 0}
+.nav{padding:9px 12px}
+.brand{font-size:17px}
+.logo{width:44px;height:44px}
+.cta{padding:11px 17px;font-size:13px}
+.card,.box{padding:25px}
+}
+</style>
+</head>
 
+<body>
+<header>
+<div class="wrap">
+<nav class="nav">
+<a class="brand" href="index.html">
+<div class="logo">🤖</div>
+<div>BotPro<small>راهکار هوشمند روبیکا</small></div>
+</a>
+<div class="links">
+<a href="index.html">خانه</a>
+<a href="#services">خدمات</a>
+<a href="#features">امکانات</a>
+<a href="#process">مراحل</a>
+<a href="#faq">سؤالات</a>
+</div>
+<a class="cta" href="#contact">سفارش ربات</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero">
+<div class="wrap">
+<span class="tag">🤖 خدمات تخصصی طراحی ربات روبیکا</span>
+<h1>ربات روبیکا برای <span class="gradient">کسب‌وکار حرفه‌ای شما</span></h1>
+<p>از ربات فروشگاهی و ثبت سفارش تا پشتیبانی، تبلیغات و پاسخگویی خودکار؛ یک راهکار متناسب با نیاز کسب‌وکار شما طراحی می‌شود.</p>
+<div class="buttons">
+<a class="btn primary" href="#contact">🚀 سفارش ساخت ربات</a>
+<a class="btn" href="#services">مشاهده خدمات</a>
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="wrap">
+<div class="title">
+<h2>خدمات ساخت ربات روبیکا</h2>
+<p>راهکارهای کاربردی برای فروش، ارتباط با مشتری و مدیریت بهتر کسب‌وکار</p>
+</div>
+
+<div class="cards">
+<article class="card"><div class="icon">🛒</div><h3>ربات فروشگاهی</h3><p>معرفی محصولات، نمایش اطلاعات، دریافت سفارش و ایجاد مسیر ساده برای خرید مشتری.</p></article>
+<article class="card"><div class="icon">💬</div><h3>ربات پشتیبانی</h3><p>پاسخگویی خودکار به پرسش‌های پرتکرار و هدایت کاربر به بخش مناسب.</p></article>
+<article class="card"><div class="icon">📦</div><h3>ربات ثبت سفارش</h3><p>دریافت اطلاعات مشتری و سفارش در قالب یک فرآیند مرتب و قابل توسعه.</p></article>
+<article class="card"><div class="icon">📢</div><h3>ربات تبلیغاتی</h3><p>معرفی خدمات، محصولات، پیشنهادهای ویژه و هدایت مخاطب به مسیر ارتباطی مناسب.</p></article>
+<article class="card"><div class="icon">⚙️</div><h3>ربات مدیریتی</h3><p>کمک به خودکارسازی بخشی از فرآیندهای روزانه و کاهش کارهای تکراری.</p></article>
+<article class="card"><div class="icon">🤖</div><h3>ربات اختصاصی</h3><p>طراحی ساختار اختصاصی بر اساس ایده، مدل کاری و امکانات موردنیاز شما.</p></article>
+</div>
+</div>
+</section>
+
+<section id="features" class="highlight">
+<div class="wrap">
+<div class="title">
+<h2>امکانات قابل توسعه ربات</h2>
+<p>ساختار ربات می‌تواند با توجه به پروژه شما تغییر و توسعه پیدا کند.</p>
+</div>
+
+<div class="features">
+<div class="box">
+<h3>✨ امکانات پیشنهادی</h3>
+<ul>
+<li>منوی حرفه‌ای و دکمه‌های تعاملی</li>
+<li>ثبت و دریافت اطلاعات کاربران</li>
+<li>ثبت سفارش و اطلاعات مشتری</li>
+<li>پاسخگویی خودکار</li>
+<li>معرفی محصولات و خدمات</li>
+<li>بخش پشتیبانی و راهنمای کاربر</li>
+<li>قابلیت توسعه امکانات در آینده</li>
+</ul>
+</div>
+
+<div class="box">
+<h3>🎯 مناسب چه کسب‌وکارهایی است؟</h3>
+<ul>
+<li>فروشگاه‌های آنلاین و اینترنتی</li>
+<li>فروشندگان و ارائه‌دهندگان خدمات</li>
+<li>کانال‌ها و کسب‌وکارهای فعال در روبیکا</li>
+<li>کسب‌وکارهای خدماتی</li>
+<li>صفحات تبلیغاتی و فروش</li>
+<li>پشتیبانی و ارتباط با مشتری</li>
+<li>کسب‌وکارهای در حال رشد</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section id="process">
+<div class="wrap">
+<div class="title">
+<h2>مراحل سفارش ساخت ربات</h2>
+<p>فرآیند سفارش ساده، شفاف و مرحله‌به‌مرحله</p>
+</div>
+
+<div class="process">
+<div class="step"><div class="num">۱</div><h3>ثبت درخواست</h3><p>ایده و امکانات موردنیاز خود را ارسال می‌کنید.</p></div>
+<div class="step"><div class="num">۲</div><h3>بررسی نیازها</h3><p>ساختار مناسب ربات بر اساس نیاز پروژه مشخص می‌شود.</p></div>
+<div class="step"><div class="num">۳</div><h3>ساخت و تست</h3><p>ربات طراحی، پیاده‌سازی و بخش‌های اصلی آن بررسی می‌شود.</p></div>
+<div class="step"><div class="num">۴</div><h3>تحویل</h3><p>نسخه آماده استفاده و قابل توسعه در اختیار شما قرار می‌گیرد.</p></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap">
+<div class="order">
+<span class="tag">💜 شروع همکاری</span>
+<h2>ربات روبیکای خودت را سفارش بده</h2>
+<p>برای مشاوره، بررسی ایده و دریافت اطلاعات بیشتر از طریق یکی از راه‌های ارتباطی پیام بدهید.</p>
+<div class="contact">
+<a class="btn primary" target="_blank" href="https://wa.me/989917163319">🟢 واتساپ</a>
+<a class="btn" target="_blank" href="https://rubika.ir/09917163319">🟣 روبیکا</a>
+</div>
+<div class="phone">📱 ۰۹۹۱۷۱۶۳۳۱۹</div>
+</div>
+</div>
+</section>
+
+<section id="faq">
+<div class="wrap">
+<div class="title">
+<h2>سؤالات متداول درباره ربات روبیکا</h2>
+<p>پاسخ چند سؤال رایج قبل از سفارش</p>
+</div>
+
+<div class="faq">
+<details><summary>هزینه ساخت ربات روبیکا چقدر است؟</summary><p>هزینه به امکانات، میزان اختصاصی بودن و پیچیدگی پروژه بستگی دارد و پس از بررسی نیازها مشخص می‌شود.</p></details>
+<details><summary>آیا ربات برای کسب‌وکار من اختصاصی ساخته می‌شود؟</summary><p>بله، ساختار و امکانات ربات می‌تواند بر اساس مدل کاری و نیازهای کسب‌وکار شما طراحی شود.</p></details>
+<details><summary>آیا امکان توسعه ربات در آینده وجود دارد؟</summary><p>بله، ساختار پروژه می‌تواند به‌گونه‌ای طراحی شود که امکان اضافه شدن امکانات جدید وجود داشته باشد.</p></details>
+<details><summary>برای سفارش ساخت ربات چه اطلاعاتی ارسال کنم؟</summary><p>نوع کسب‌وکار، هدف ربات، امکانات موردنیاز و هر توضیحی که درباره روند کاری خود دارید را ارسال کنید.</p></details>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<div class="title">
+<h2>طراحی ربات روبیکا برای فروش و پشتیبانی</h2>
+<p>یک ربات حرفه‌ای می‌تواند مسیر ارتباط با مشتری، معرفی خدمات و محصولات، دریافت سفارش، پاسخگویی و بخشی از فعالیت‌های تکراری کسب‌وکار را ساده‌تر کند. طراحی منوی کاربردی، دکمه‌های تعاملی و ساختار قابل توسعه باعث می‌شود تجربه کاربر منظم‌تر باشد. ربات روبیکا می‌تواند برای فروشگاه‌های آنلاین، کسب‌وکارهای خدماتی، تبلیغات، ثبت سفارش، پشتیبانی مشتریان و فعالیت‌های آنلاین توسعه پیدا کند.</p>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<strong>BotPro 🤖</strong>
+<p>طراحی و ساخت ربات حرفه‌ای روبیکا برای کسب‌وکارها</p>
+<small>© تمامی حقوق محفوظ است.</small>
+</div>
+</footer>
+</body>
+  </html>
