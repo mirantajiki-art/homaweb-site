@@ -1,419 +1,1880 @@
-<!-- ================= ORDER ANIMATION ================= -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>تماس با ما | سفارش ساخت ربات حرفه‌ای</title>
+
+<meta name="description" content="برای سفارش ساخت ربات حرفه‌ای روبیکا، تلگرام و واتساپ با ما تماس بگیرید. درخواست خود را ارسال کنید و درباره طراحی ربات اختصاصی مشاوره بگیرید.">
+
+<meta name="keywords" content="تماس با ما, سفارش ساخت ربات, ساخت ربات روبیکا, ساخت ربات تلگرام, ساخت ربات واتساپ, ربات حرفه ای, ربات اختصاصی">
+
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#7139ee">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-.order-animation{
-    position:relative;
-    width:100%;
-    max-width:480px;
-    height:430px;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Vazirmatn",sans-serif;
+    background:#fff;
+    color:#191526;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input,
+textarea,
+select{
+    font-family:inherit;
+}
+
+.container{
+    width:min(1160px,calc(100% - 30px));
     margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+    width:min(1160px,calc(100% - 30px));
+    margin:18px auto;
+    padding:12px 17px;
+    border:1px solid #eeeaf5;
+    border-radius:28px;
+    background:rgba(255,255,255,.96);
+    box-shadow:0 12px 40px rgba(48,25,95,.07);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:12px;
+    z-index:1000;
+    backdrop-filter:blur(15px);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:11px;
+}
+
+.logo-icon{
+    width:54px;
+    height:54px;
+    border-radius:18px;
     display:flex;
     align-items:center;
     justify-content:center;
-    overflow:hidden;
+    font-size:27px;
+    color:#fff;
+    background:linear-gradient(135deg,#8735f5,#4767ff);
+    box-shadow:0 10px 25px rgba(103,56,235,.22);
 }
 
-/* نور پشت شخصیت */
-.order-animation .glow{
-    position:absolute;
-    width:280px;
-    height:280px;
-    border-radius:50%;
-    background:rgba(116,57,238,.12);
-    filter:blur(55px);
-    animation:glowMove 4s ease-in-out infinite;
-}
-
-@keyframes glowMove{
-    0%,100%{transform:scale(1)}
-    50%{transform:scale(1.12)}
-}
-
-/* فرم */
-.order-animation .mini-form{
-    position:absolute;
-    left:25px;
-    top:55px;
-    width:205px;
-    padding:18px;
-    border-radius:22px;
-    background:#fff;
-    border:1px solid #eee8f7;
-    box-shadow:0 20px 45px rgba(47,25,90,.12);
-    z-index:10;
-    animation:formFloat 4s ease-in-out infinite;
-}
-
-@keyframes formFloat{
-    0%,100%{transform:translateY(0)}
-    50%{transform:translateY(-8px)}
-}
-
-.mini-form-title{
-    font-size:13px;
+.logo-text strong{
+    display:block;
+    font-size:20px;
     font-weight:900;
-    margin-bottom:14px;
 }
 
-.mini-input{
-    height:12px;
-    border-radius:10px;
-    background:#eeeaf5;
-    margin-bottom:9px;
+.logo-text span{
+    color:#8a8492;
+    font-size:11px;
 }
 
-.mini-input.short{
-    width:65%;
+.nav{
+    display:flex;
+    align-items:center;
+    gap:4px;
 }
 
-.mini-button{
-    height:32px;
-    border-radius:12px;
-    margin-top:12px;
-    background:linear-gradient(135deg,#8435f3,#5b45ef);
+.nav a{
+    padding:11px 15px;
+    border-radius:17px;
+    color:#625d6c;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav a:hover{
+    color:#7139ee;
+    background:#f3edff;
+}
+
+.nav .active{
+    color:#fff;
+    background:linear-gradient(135deg,#8433f4,#5b45ef);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    padding:70px 0 60px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:45px;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:9px 16px;
+    border-radius:30px;
+    color:#7139ee;
+    background:#f4efff;
+    font-size:13px;
+    font-weight:800;
+}
+
+.hero h1{
+    margin-top:20px;
+    font-size:clamp(36px,5vw,58px);
+    line-height:1.45;
+    font-weight:900;
+}
+
+.hero h1 span{
+    color:#7139ee;
+}
+
+.hero-text{
+    margin-top:18px;
+    color:#77717f;
+    line-height:2.3;
+    font-size:15px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:27px;
+}
+
+.btn{
+    min-height:54px;
+    padding:14px 24px;
+    border-radius:20px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    font-weight:800;
+    transition:.35s;
+}
+
+.primary{
+    color:#fff;
+    background:linear-gradient(135deg,#8735f5,#5e43ef);
+    box-shadow:0 14px 30px rgba(105,55,235,.23);
+}
+
+.primary:hover{
+    transform:translateY(-5px) scale(1.02);
+}
+
+.secondary{
+    background:#fff;
+    border:1px solid #e5e0ec;
+}
+
+.secondary:hover{
+    transform:translateY(-5px);
+    color:#7139ee;
+    border-color:#ccb6f7;
+}
+
+/* ================= ANIMATED PERSON ================= */
+
+.scene{
+    height:480px;
     position:relative;
-    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.mini-button:after{
-    content:"";
+.scene-glow{
     position:absolute;
-    top:0;
-    left:-70px;
-    width:45px;
-    height:100%;
-    background:rgba(255,255,255,.35);
-    transform:skewX(-20deg);
-    animation:shine 2.8s infinite;
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    background:rgba(113,57,238,.12);
+    filter:blur(60px);
+    animation:glow 4s ease-in-out infinite;
 }
 
-@keyframes shine{
-    0%{left:-70px}
-    45%,100%{left:230px}
+@keyframes glow{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.12);
+    }
+}
+
+/* میز */
+
+.desk{
+    position:absolute;
+    bottom:58px;
+    width:400px;
+    height:25px;
+    border-radius:20px;
+    background:linear-gradient(90deg,#29223b,#47375f);
+    z-index:3;
+    box-shadow:0 15px 30px rgba(37,24,66,.15);
+}
+
+.desk-leg{
+    position:absolute;
+    bottom:-145px;
+    width:15px;
+    height:145px;
+    background:#302743;
+    border-radius:10px;
+}
+
+.desk-leg.left{
+    left:30px;
+}
+
+.desk-leg.right{
+    right:30px;
 }
 
 /* شخصیت */
-.person-order{
+
+.person{
     position:absolute;
+    width:245px;
+    height:320px;
+    bottom:80px;
     right:45px;
-    bottom:55px;
-    width:220px;
-    height:300px;
-    z-index:5;
+    z-index:7;
 }
 
 /* سر */
-.person-order .head{
+
+.head{
     position:absolute;
-    top:5px;
-    right:62px;
-    width:88px;
-    height:103px;
+    top:0;
+    right:75px;
+    width:90px;
+    height:105px;
     border-radius:48% 48% 43% 43%;
-    background:#f2bb91;
-    z-index:5;
+    background:#f2bd92;
+    z-index:6;
 }
 
 /* مو */
-.person-order .hair{
+
+.hair{
     position:absolute;
-    top:-10px;
+    top:-11px;
     right:-3px;
-    width:95px;
-    height:58px;
+    width:97px;
+    height:60px;
     border-radius:55px 55px 25px 25px;
-    background:#272032;
+    background:#251e30;
 }
 
-.person-order .hair:after{
+.hair:after{
     content:"";
     position:absolute;
-    right:8px;
     top:35px;
-    width:24px;
-    height:39px;
-    border-radius:0 0 18px 18px;
-    background:#272032;
+    right:8px;
+    width:25px;
+    height:40px;
+    border-radius:0 0 20px 20px;
+    background:#251e30;
 }
 
-/* چشم‌ها */
-.person-order .eye{
+/* چشم */
+
+.eye{
     position:absolute;
     top:52px;
     width:8px;
     height:8px;
     border-radius:50%;
-    background:#312430;
-    transition:.3s;
+    background:#322430;
 }
 
-.person-order .eye.one{
+.eye.one{
     right:23px;
 }
 
-.person-order .eye.two{
-    right:56px;
-}
-
-/* نگاه کردن به فرم */
-.person-order:hover .eye.one{
-    transform:translateX(-5px);
-}
-
-.person-order:hover .eye.two{
-    transform:translateX(-5px);
+.eye.two{
+    right:57px;
 }
 
 /* لبخند */
-.person-order .smile{
+
+.smile{
     position:absolute;
-    top:77px;
-    right:36px;
+    top:78px;
+    right:35px;
     width:23px;
     height:9px;
-    border-bottom:2px solid #904f5a;
+    border-bottom:2px solid #8e4e58;
     border-radius:50%;
 }
 
 /* بدن */
-.person-order .body{
+
+.body{
     position:absolute;
     top:103px;
-    right:38px;
+    right:45px;
     width:150px;
-    height:180px;
+    height:185px;
     border-radius:55px 55px 25px 25px;
-    background:linear-gradient(145deg,#7639ee,#5146c9);
-    box-shadow:0 20px 35px rgba(71,43,161,.18);
+    background:linear-gradient(145deg,#7738ef,#5045c9);
+    box-shadow:0 20px 35px rgba(68,42,158,.18);
 }
 
-/* دست */
-.person-order .arm{
+/* دست متحرک */
+
+.arm{
     position:absolute;
-    top:130px;
-    right:0;
-    width:130px;
-    height:26px;
+    top:126px;
+    right:-10px;
+    width:135px;
+    height:27px;
     border-radius:20px;
-    background:#f2bb91;
-    transform:rotate(28deg);
+    background:#f2bd92;
     transform-origin:right center;
-    z-index:7;
-    animation:handMove 3s ease-in-out infinite;
+    transform:rotate(27deg);
+    z-index:10;
+    animation:typingArm 2.7s ease-in-out infinite;
 }
 
-@keyframes handMove{
+@keyframes typingArm{
+
     0%,100%{
-        transform:rotate(28deg);
+        transform:rotate(27deg);
     }
+
     50%{
-        transform:rotate(18deg);
+        transform:rotate(13deg);
     }
+
 }
 
-.person-order .hand{
+.hand{
     position:absolute;
     left:-10px;
     top:-2px;
     width:30px;
     height:30px;
     border-radius:50%;
-    background:#f2bb91;
+    background:#f2bd92;
 }
 
 /* لپ‌تاپ */
-.order-laptop{
+
+.laptop{
     position:absolute;
-    right:82px;
-    bottom:55px;
-    width:175px;
+    right:50px;
+    bottom:73px;
+    width:180px;
     z-index:12;
 }
 
-.order-screen{
-    width:155px;
-    height:95px;
+.screen{
+    width:157px;
+    height:96px;
     margin:auto;
     padding:13px;
-    border:8px solid #292239;
+    border:8px solid #29223a;
     border-radius:15px 15px 8px 8px;
-    background:#171326;
-    box-shadow:0 15px 25px rgba(25,15,48,.2);
+    background:#161326;
+    box-shadow:0 15px 30px rgba(25,15,48,.2);
 }
 
-.order-code{
-    width:85%;
+.code-line{
     height:5px;
+    width:85%;
     margin-bottom:8px;
-    border-radius:8px;
+    border-radius:10px;
     background:#8245f1;
+    animation:codePulse 2s ease-in-out infinite;
 }
 
-.order-code:nth-child(2){
-    width:60%;
-    background:#54a4ff;
+.code-line:nth-child(2){
+    width:62%;
+    background:#55a5ff;
+    animation-delay:.2s;
 }
 
-.order-code:nth-child(3){
-    width:72%;
-    background:#72ddb0;
+.code-line:nth-child(3){
+    width:73%;
+    background:#72dfb0;
+    animation-delay:.4s;
 }
 
-.order-code:nth-child(4){
-    width:45%;
-    background:#a675ff;
+.code-line:nth-child(4){
+    width:48%;
+    background:#b27cff;
+    animation-delay:.6s;
 }
 
-.order-keyboard{
-    width:180px;
+@keyframes codePulse{
+    0%,100%{
+        opacity:.65;
+        transform:scaleX(1);
+    }
+
+    50%{
+        opacity:1;
+        transform:scaleX(.86);
+    }
+}
+
+.keyboard{
+    width:182px;
     height:18px;
     margin:auto;
     border-radius:0 0 18px 18px;
-    background:#393149;
+    background:#3b324c;
 }
 
-/* میز */
-.order-desk{
+/* موس */
+
+.mouse{
     position:absolute;
-    bottom:35px;
-    width:410px;
-    height:24px;
-    border-radius:20px;
-    background:linear-gradient(90deg,#28223a,#42355e);
-    z-index:4;
+    right:7px;
+    bottom:86px;
+    width:27px;
+    height:42px;
+    border-radius:15px;
+    background:#2e2740;
+    z-index:15;
+    animation:mouseMove 2.7s ease-in-out infinite;
 }
 
-/* حباب راهنما */
-.order-bubble{
+.mouse:after{
+    content:"";
     position:absolute;
-    right:0;
-    top:25px;
-    z-index:20;
-    padding:12px 17px;
-    border-radius:18px 18px 5px 18px;
-    background:#fff;
-    border:1px solid #eee8f7;
-    box-shadow:0 15px 35px rgba(47,25,90,.1);
-    font-size:12px;
-    font-weight:800;
-    animation:bubbleMove 3.5s ease-in-out infinite;
+    top:8px;
+    left:11px;
+    width:5px;
+    height:9px;
+    border-radius:5px;
+    background:#8a5aff;
 }
 
-@keyframes bubbleMove{
-    0%,100%{transform:translateY(0)}
-    50%{transform:translateY(-10px)}
-}
+@keyframes mouseMove{
 
-/* نشانگر موس */
-.order-pointer{
-    position:absolute;
-    left:195px;
-    top:180px;
-    z-index:25;
-    font-size:25px;
-    animation:pointerMove 2.8s ease-in-out infinite;
-}
-
-@keyframes pointerMove{
     0%,100%{
         transform:translate(0,0);
     }
+
     50%{
-        transform:translate(35px,15px);
+        transform:translate(-12px,-4px);
+    }
+
+}
+
+/* کارت‌های شناور */
+
+.float{
+    position:absolute;
+    z-index:25;
+    padding:12px 16px;
+    border-radius:19px;
+    border:1px solid #eee8f7;
+    background:rgba(255,255,255,.95);
+    box-shadow:0 15px 35px rgba(45,25,85,.11);
+    font-size:12px;
+    font-weight:800;
+}
+
+.float.one{
+    top:55px;
+    right:15px;
+    animation:float 3.5s ease-in-out infinite;
+}
+
+.float.two{
+    top:205px;
+    left:8px;
+    animation:float 4s ease-in-out infinite .5s;
+}
+
+.float.three{
+    bottom:35px;
+    left:25px;
+    animation:float 3.8s ease-in-out infinite 1s;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-11px);
     }
 }
 
-/* موبایل */
+/* نشانگر */
+
+.cursor{
+    position:absolute;
+    z-index:30;
+    right:185px;
+    bottom:130px;
+    font-size:24px;
+    animation:cursorMove 2.7s ease-in-out infinite;
+}
+
+@keyframes cursorMove{
+
+    0%,100%{
+        transform:translate(0,0);
+    }
+
+    50%{
+        transform:translate(-27px,-9px);
+    }
+
+}
+
+/* ================= SECTION ================= */
+
+.section{
+    padding:65px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:38px;
+}
+
+.section-title small{
+    color:#7139ee;
+    font-weight:900;
+}
+
+.section-title h2{
+    margin-top:8px;
+    font-size:clamp(28px,4vw,42px);
+    font-weight:900;
+}
+
+.section-title p{
+    max-width:750px;
+    margin:12px auto 0;
+    color:#817b88;
+    line-height:2.2;
+}
+
+/* ================= CONTACT CARDS ================= */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.contact-card{
+    padding:30px 24px;
+    border:1px solid #eeeaf4;
+    border-radius:30px;
+    background:#fff;
+    transition:.35s;
+    position:relative;
+    overflow:hidden;
+}
+
+.contact-card:before{
+    content:"";
+    position:absolute;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:#f3edff;
+    right:-40px;
+    top:-40px;
+}
+
+.contact-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 22px 50px rgba(55,30,100,.09);
+}
+
+.contact-icon{
+    width:62px;
+    height:62px;
+    border-radius:21px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:29px;
+    background:#f2eaff;
+    position:relative;
+}
+
+.contact-card h3{
+    margin-top:18px;
+    font-size:20px;
+}
+
+.contact-card p{
+    margin-top:9px;
+    color:#817b89;
+    line-height:2;
+    font-size:13px;
+}
+
+.contact-card .card-link{
+    display:inline-flex;
+    margin-top:17px;
+    padding:11px 17px;
+    border-radius:15px;
+    color:#fff;
+    background:linear-gradient(135deg,#8735f5,#5e43ef);
+    font-size:12px;
+    font-weight:800;
+    transition:.3s;
+}
+
+.contact-card .card-link:hover{
+    transform:translateY(-4px);
+}
+
+/* ================= FORM ================= */
+
+.form-section{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:25px;
+    align-items:stretch;
+}
+
+.form-box{
+    padding:35px;
+    border:1px solid #eeeaf4;
+    border-radius:32px;
+    background:#fff;
+    box-shadow:0 15px 40px rgba(45,25,85,.05);
+}
+
+.form-box h2{
+    font-size:27px;
+}
+
+.form-box > p{
+    color:#817b89;
+    font-size:13px;
+    line-height:2.1;
+    margin-top:8px;
+    margin-bottom:23px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.field{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.field.full{
+    grid-column:1/-1;
+}
+
+.field label{
+    font-size:13px;
+    font-weight:800;
+}
+
+.field input,
+.field select,
+.field textarea{
+    width:100%;
+    border:1px solid #e5dfeb;
+    border-radius:17px;
+    outline:none;
+    padding:13px 15px;
+    background:#fbfaff;
+    color:#252031;
+    transition:.3s;
+}
+
+.field input,
+.field select{
+    height:52px;
+}
+
+.field textarea{
+    min-height:145px;
+    resize:vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+    border-color:#9a72ed;
+    background:#fff;
+    box-shadow:0 0 0 4px rgba(113,57,238,.08);
+}
+
+.submit{
+    width:100%;
+    border:0;
+    cursor:pointer;
+    margin-top:17px;
+    height:55px;
+    border-radius:19px;
+    color:#fff;
+    font-weight:900;
+    font-size:14px;
+    background:linear-gradient(135deg,#8735f5,#5e43ef);
+    box-shadow:0 14px 30px rgba(105,55,235,.2);
+    transition:.35s;
+}
+
+.submit:hover{
+    transform:translateY(-4px);
+    box-shadow:0 20px 38px rgba(105,55,235,.28);
+}
+
+/* ================= INFO ================= */
+
+.info-box{
+    padding:35px;
+    border-radius:32px;
+    color:#fff;
+    background:linear-gradient(145deg,#19132f,#2e1853);
+    position:relative;
+    overflow:hidden;
+}
+
+.info-box:before{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:rgba(128,78,255,.16);
+    left:-100px;
+    bottom:-100px;
+    filter:blur(10px);
+}
+
+.info-box h2{
+    font-size:27px;
+    position:relative;
+}
+
+.info-box p{
+    color:#c8c0d5;
+    line-height:2.2;
+    font-size:13px;
+    margin-top:12px;
+    position:relative;
+}
+
+.info-list{
+    margin-top:25px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    position:relative;
+}
+
+.info-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:14px;
+    border-radius:18px;
+    background:rgba(255,255,255,.07);
+}
+
+.info-item-icon{
+    width:42px;
+    height:42px;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,255,255,.1);
+}
+
+.info-item div:last-child{
+    font-size:12px;
+    color:#ddd6e7;
+}
+
+/* ================= FAQ ================= */
+
+.faq{
+    max-width:900px;
+    margin:auto;
+}
+
+details{
+    margin-bottom:12px;
+    padding:19px 22px;
+    border:1px solid #eeeaf4;
+    border-radius:21px;
+    background:#fff;
+    transition:.3s;
+}
+
+details[open]{
+    border-color:#d4c1f8;
+    box-shadow:0 12px 30px rgba(55,30,100,.06);
+}
+
+summary{
+    cursor:pointer;
+    font-weight:800;
+    list-style:none;
+}
+
+summary::-webkit-details-marker{
+    display:none;
+}
+
+details p{
+    padding-top:13px;
+    color:#77717f;
+    line-height:2.15;
+    font-size:14px;
+}
+
+/* ================= SEO ================= */
+
+.seo{
+    padding:40px;
+    border:1px solid #eeeaf4;
+    border-radius:34px;
+    background:linear-gradient(145deg,#fff,#faf8ff);
+}
+
+.seo h2{
+    font-size:29px;
+}
+
+.seo h3{
+    margin-top:25px;
+    font-size:20px;
+}
+
+.seo p{
+    margin-top:8px;
+    color:#77717f;
+    line-height:2.3;
+    font-size:14px;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    width:min(900px,calc(100% - 30px));
+    margin:65px auto 80px;
+    padding:50px 25px;
+    text-align:center;
+    color:#fff;
+    border-radius:38px;
+    background:linear-gradient(135deg,#19132f,#2d1851);
+    box-shadow:0 25px 65px rgba(31,15,60,.18);
+}
+
+.cta h2{
+    font-size:32px;
+}
+
+.cta p{
+    max-width:680px;
+    margin:12px auto 25px;
+    color:#c8c0d5;
+    line-height:2;
+}
+
+.cta-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.cta-btn{
+    padding:14px 24px;
+    border-radius:19px;
+    color:#fff;
+    font-weight:800;
+    transition:.3s;
+}
+
+.cta-btn:hover{
+    transform:translateY(-5px);
+}
+
+.whatsapp{
+    background:#20c879;
+}
+
+.rubika{
+    background:#7144ed;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    padding:55px 20px 25px;
+    background:#171327;
+    color:#fff;
+}
+
+.footer{
+    width:min(1100px,100%);
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
+    gap:40px;
+}
+
+footer h3{
+    margin-bottom:15px;
+}
+
+footer p,
+footer a{
+    color:#b8b1c5;
+    font-size:14px;
+    line-height:2.2;
+}
+
+.links{
+    display:flex;
+    flex-direction:column;
+}
+
+.links a{
+    transition:.25s;
+}
+
+.links a:hover{
+    color:#fff;
+    transform:translateX(-4px);
+}
+
+.copyright{
+    width:min(1100px,100%);
+    margin:30px auto 0;
+    padding-top:18px;
+    border-top:1px solid rgba(255,255,255,.08);
+    text-align:center;
+    color:#898292;
+    font-size:12px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    .nav{
+        display:none;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero-text{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-section{
+        grid-template-columns:1fr;
+    }
+
+    .footer{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .links{
+        align-items:center;
+    }
+
+}
+
 @media(max-width:600px){
 
-    .order-animation{
-        transform:scale(.85);
+    .hero{
+        padding-top:50px;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .scene{
+        transform:scale(.82);
         margin-top:-25px;
-        margin-bottom:-30px;
+        margin-bottom:-40px;
+    }
+
+    .form-box,
+    .info-box{
+        padding:24px 18px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .field.full{
+        grid-column:auto;
+    }
+
+    .seo{
+        padding:25px 18px;
+    }
+
+    .cta{
+        padding:38px 18px;
+        border-radius:29px;
     }
 
 }
+
 </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+
+        <div class="logo-icon">
+            ✦
+        </div>
+
+        <div class="logo-text">
+            <strong>BotPro</strong>
+            <span>راهکارهای هوشمند و ربات‌های حرفه‌ای</span>
+        </div>
+
+    </a>
+
+    <nav class="nav">
+
+        <a href="index.html">
+            خانه
+        </a>
+
+        <a href="services.html">
+            خدمات
+        </a>
+
+        <a href="order.html">
+            سفارش ساخت
+        </a>
+
+        <a href="about.html">
+            درباره ما
+        </a>
+
+        <a href="contact.html" class="active">
+            تماس با ما
+        </a>
+
+    </nav>
+
+</header>
 
 
-<div class="order-animation">
+<main>
 
-    <div class="glow"></div>
+<!-- ================= HERO ================= -->
 
-    <!-- فرم ثبت سفارش -->
-    <div class="mini-form">
+<section class="container hero">
 
-        <div class="mini-form-title">
+    <div>
+
+        <span class="badge">
+            💬 ارتباط با ما
+        </span>
+
+        <h1>
+            آماده‌ای
+            <br>
+            <span>شروع کنیم؟</span>
+        </h1>
+
+        <p class="hero-text">
+            اگر برای کسب‌وکار یا ایده خود به یک ربات حرفه‌ای
+            نیاز دارید، درخواستتان را ارسال کنید.
+            درباره نوع پروژه، امکانات موردنیاز و پلتفرم موردنظر
+            توضیح دهید تا مسیر مناسب برای اجرای آن مشخص شود.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#contact-form" class="btn primary">
+                📝 ارسال درخواست
+            </a>
+
+            <a href="order.html" class="btn secondary">
+                🚀 سفارش ساخت
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ANIMATION -->
+
+    <div class="scene">
+
+        <div class="scene-glow"></div>
+
+        <div class="float one">
+            💡 بررسی ایده
+        </div>
+
+        <div class="float two">
+            ⚙️ در حال کار
+        </div>
+
+        <div class="float three">
+            ✓ آماده ارسال
+        </div>
+
+
+        <div class="person">
+
+            <div class="head">
+
+                <div class="hair"></div>
+
+                <div class="eye one"></div>
+                <div class="eye two"></div>
+
+                <div class="smile"></div>
+
+            </div>
+
+            <div class="body"></div>
+
+            <div class="arm">
+
+                <div class="hand"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="laptop">
+
+            <div class="screen">
+
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+
+            </div>
+
+            <div class="keyboard"></div>
+
+        </div>
+
+
+        <div class="mouse"></div>
+
+        <div class="cursor">
+            🖱️
+        </div>
+
+
+        <div class="desk">
+
+            <div class="desk-leg left"></div>
+            <div class="desk-leg right"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT CARDS ================= -->
+
+<section class="container section">
+
+    <div class="section-title">
+
+        <small>
+            راه‌های ارتباطی
+        </small>
+
+        <h2>
+            از هر روشی راحت‌تری با ما در ارتباط باش
+        </h2>
+
+        <p>
+            برای پرسش، مشاوره، سفارش ساخت یا توضیح ایده
+            می‌توانید از روش‌های زیر استفاده کنید.
+        </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+        <article class="contact-card">
+
+            <div class="contact-icon">
+                💬
+            </div>
+
+            <h3>
+                واتساپ
+            </h3>
+
+            <p>
+                برای ارتباط مستقیم و ارسال توضیحات پروژه
+                می‌توانید از واتساپ استفاده کنید.
+            </p>
+
+            <a
+                class="card-link"
+                href="https://wa.me/989917163319"
+                target="_blank"
+                rel="noopener"
+            >
+                ارتباط در واتساپ
+            </a>
+
+        </article>
+
+
+        <article class="contact-card">
+
+            <div class="contact-icon">
+                🤖
+            </div>
+
+            <h3>
+                روبیکا
+            </h3>
+
+            <p>
+                اگر ترجیح می‌دهید از روبیکا ارتباط بگیرید،
+                می‌توانید از طریق لینک زیر پیام ارسال کنید.
+            </p>
+
+            <a
+                class="card-link"
+                href="https://rubika.ir/09917163319"
+                target="_blank"
+                rel="noopener"
+            >
+                ارتباط در روبیکا
+            </a>
+
+        </article>
+
+
+        <article class="contact-card">
+
+            <div class="contact-icon">
+                🚀
+            </div>
+
+            <h3>
+                سفارش ساخت
+            </h3>
+
+            <p>
+                اگر آماده شروع پروژه هستید، جزئیات ایده خود
+                را از طریق صفحه سفارش ساخت ارسال کنید.
+            </p>
+
+            <a
+                class="card-link"
+                href="order.html"
+            >
+                ثبت سفارش
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FORM ================= -->
+
+<section class="container section" id="contact-form">
+
+    <div class="form-section">
+
+        <div class="form-box">
+
+            <h2>
+                📝 درخواست خود را ارسال کنید
+            </h2>
+
+            <p>
+                اطلاعات اولیه پروژه را وارد کنید. هرچه توضیحات
+                دقیق‌تر باشد، درک نیاز پروژه ساده‌تر خواهد بود.
+            </p>
+
+
+            <form action="#" method="post">
+
+                <div class="form-grid">
+
+                    <div class="field">
+
+                        <label for="name">
+                            نام
+                        </label>
+
+                        <input
+                            id="name"
+                            name="name"
+                            type="text"
+                            placeholder="نام شما"
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="phone">
+                            شماره تماس
+                        </label>
+
+                        <input
+                            id="phone"
+                            name="phone"
+                            type="tel"
+                            placeholder="مثلاً ۰۹۱۲..."
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="platform">
+                            پلتفرم موردنظر
+                        </label>
+
+                        <select id="platform" name="platform">
+
+                            <option value="">
+                                انتخاب کنید
+                            </option>
+
+                            <option value="rubika">
+                                روبیکا
+                            </option>
+
+                            <option value="telegram">
+                                تلگرام
+                            </option>
+
+                            <option value="whatsapp">
+                                واتساپ
+                            </option>
+
+                            <option value="other">
+                                سایر
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="project">
+                            نوع پروژه
+                        </label>
+
+                        <select id="project" name="project">
+
+                            <option value="">
+                                انتخاب کنید
+                            </option>
+
+                            <option value="store">
+                                ربات فروشگاهی
+                            </option>
+
+                            <option value="support">
+                                ربات پشتیبانی
+                            </option>
+
+                            <option value="order">
+                                ربات ثبت سفارش
+                            </option>
+
+                            <option value="custom">
+                                ربات اختصاصی
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="field full">
+
+                        <label for="message">
+                            توضیحات پروژه
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="ایده یا امکاناتی که برای ربات می‌خواهید را توضیح دهید..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit"
+                >
+                    🚀 ارسال درخواست
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <aside class="info-box">
+
+            <h2>
+                قبل از ارسال درخواست
+            </h2>
+
+            <p>
+                لازم نیست همه جزئیات پروژه را از قبل بدانید.
+                کافی است توضیح دهید چه کاری می‌خواهید ربات
+                برای شما انجام دهد.
+            </p>
+
+
+            <div class="info-list">
+
+                <div class="info-item">
+
+                    <div class="info-item-icon">
+                        💡
+                    </div>
+
+                    <div>
+                        ایده اولیه خود را توضیح دهید.
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <div class="info-item-icon">
+                        📱
+                    </div>
+
+                    <div>
+                        پلتفرم موردنظر را مشخص کنید.
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <div class="info-item-icon">
+                        ⚙️
+                    </div>
+
+                    <div>
+                        امکانات مهم را بنویسید.
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <div class="info-item-icon">
+                        🎯
+                    </div>
+
+                    <div>
+                        هدف اصلی ربات را توضیح دهید.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FAQ ================= -->
+
+<section class="container section">
+
+    <div class="section-title">
+
+        <small>
+            سوالات متداول
+        </small>
+
+        <h2>
+            قبل از تماس شاید این‌ها را بدانید
+        </h2>
+
+    </div>
+
+
+    <div class="faq">
+
+        <details>
+
+            <summary>
+                برای شروع سفارش چه اطلاعاتی لازم است؟
+            </summary>
+
+            <p>
+                نام، شماره تماس، پلتفرم موردنظر و توضیحی درباره
+                ایده یا امکاناتی که برای ربات نیاز دارید کافی است.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                اگر ایده کاملی نداشته باشم می‌توانم درخواست بدهم؟
+            </summary>
+
+            <p>
+                بله. می‌توانید فقط توضیح دهید چه کاری می‌خواهید
+                ربات انجام دهد و امکانات دقیق‌تر بعداً مشخص شوند.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                امکان ساخت ربات برای روبیکا وجود دارد؟
+            </summary>
+
+            <p>
+                می‌توانید پروژه مربوط به روبیکا را برای بررسی
+                و تعیین امکانات موردنیاز ارسال کنید.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                آیا برای تلگرام و واتساپ هم پروژه انجام می‌شود؟
+            </summary>
+
+            <p>
+                پروژه‌های مربوط به تلگرام و واتساپ نیز می‌توانند
+                بر اساس نیاز و امکانات موردنظر بررسی شوند.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                آیا می‌توان بعداً امکانات جدید اضافه کرد؟
+            </summary>
+
+            <p>
+                ساختار پروژه می‌تواند با توجه به نوع ربات و
+                معماری آن برای توسعه‌های آینده در نظر گرفته شود.
+            </p>
+
+        </details>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SEO CONTENT ================= -->
+
+<section class="container section">
+
+    <div class="seo">
+
+        <h2>
+            تماس برای طراحی و ساخت ربات حرفه‌ای
+        </h2>
+
+        <p>
+            اگر به دنبال طراحی ربات حرفه‌ای برای کسب‌وکار،
+            فروشگاه، خدمات آنلاین یا یک ایده اختصاصی هستید،
+            می‌توانید درخواست خود را ارسال کنید. طراحی ربات
+            مناسب می‌تواند فرآیندهایی مانند ثبت سفارش،
+            پاسخگویی، معرفی خدمات، اطلاع‌رسانی و ارتباط با
+            کاربران را ساده‌تر کند.
+        </p>
+
+
+        <h3>
+            سفارش ساخت ربات روبیکا
+        </h3>
+
+        <p>
+            ربات روبیکا می‌تواند برای پروژه‌های مختلف از جمله
+            خدمات، فروش، اطلاع‌رسانی و مدیریت ارتباط با کاربران
+            مورد استفاده قرار گیرد. نوع امکانات بر اساس هدف
+            پروژه مشخص می‌شود.
+        </p>
+
+
+        <h3>
+            سفارش ساخت ربات تلگرام
+        </h3>
+
+        <p>
+            برای پروژه‌های تلگرامی می‌توان ساختار ربات را بر اساس
+            نیاز کاربران و فرآیندهای کسب‌وکار طراحی کرد؛ از
+            منوهای ساده تا فرآیندهای اختصاصی و چندمرحله‌ای.
+        </p>
+
+
+        <h3>
+            راهکارهای ارتباطی واتساپ
+        </h3>
+
+        <p>
+            واتساپ یکی از مسیرهای مهم ارتباطی بسیاری از کسب‌وکارها
+            با مشتریان است. در پروژه‌های مرتبط می‌توان نیازهای
+            ارتباطی و فرآیند پاسخگویی را بررسی و برای آن راهکار
+            مناسب طراحی کرد.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <h2>
+        آماده‌ای ایده‌ات را شروع کنیم؟ 🚀
+    </h2>
+
+    <p>
+        همین حالا درخواست خود را ارسال کن یا مستقیماً از طریق
+        واتساپ یا روبیکا با ما ارتباط بگیر.
+    </p>
+
+    <div class="cta-buttons">
+
+        <a
+            href="order.html"
+            class="cta-btn primary"
+        >
             📝 ثبت سفارش
-        </div>
+        </a>
 
-        <div class="mini-input"></div>
-        <div class="mini-input"></div>
-        <div class="mini-input short"></div>
-        <div class="mini-input"></div>
+        <a
+            href="https://wa.me/989917163319"
+            target="_blank"
+            rel="noopener"
+            class="cta-btn whatsapp"
+        >
+            💬 واتساپ
+        </a>
 
-        <div class="mini-button"></div>
-
-    </div>
-
-
-    <!-- حباب -->
-    <div class="order-bubble">
-        👀 در حال بررسی سفارش...
-    </div>
-
-
-    <!-- شخصیت -->
-    <div class="person-order">
-
-        <div class="head">
-
-            <div class="hair"></div>
-
-            <div class="eye one"></div>
-            <div class="eye two"></div>
-
-            <div class="smile"></div>
-
-        </div>
-
-
-        <div class="body"></div>
-
-
-        <div class="arm">
-
-            <div class="hand"></div>
-
-        </div>
+        <a
+            href="https://rubika.ir/09917163319"
+            target="_blank"
+            rel="noopener"
+            class="cta-btn rubika"
+        >
+            🤖 روبیکا
+        </a>
 
     </div>
 
+</section>
 
-    <!-- لپ‌تاپ -->
-    <div class="order-laptop">
+</main>
 
-        <div class="order-screen">
 
-            <div class="order-code"></div>
-            <div class="order-code"></div>
-            <div class="order-code"></div>
-            <div class="order-code"></div>
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer">
+
+        <div>
+
+            <h3>
+                ✦ BotPro
+            </h3>
+
+            <p>
+                طراحی و ساخت ربات‌های حرفه‌ای و اختصاصی
+                برای روبیکا، تلگرام و واتساپ با تمرکز بر
+                تجربه کاربری و نیاز واقعی کسب‌وکار.
+            </p>
 
         </div>
 
-        <div class="order-keyboard"></div>
+
+        <div>
+
+            <h3>
+                دسترسی سریع
+            </h3>
+
+            <div class="links">
+
+                <a href="index.html">
+                    خانه
+                </a>
+
+                <a href="services.html">
+                    خدمات
+                </a>
+
+                <a href="order.html">
+                    سفارش ساخت
+                </a>
+
+                <a href="about.html">
+                    درباره ما
+                </a>
+
+                <a href="contact.html">
+                    تماس با ما
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                ارتباط
+            </h3>
+
+            <div class="links">
+
+                <a
+                    href="https://wa.me/989917163319"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    💬 واتساپ
+                </a>
+
+                <a
+                    href="https://rubika.ir/09917163319"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    🤖 روبیکا
+                </a>
+
+                <a href="order.html">
+                    🚀 سفارش ساخت
+                </a>
+
+            </div>
+
+        </div>
 
     </div>
 
 
-    <!-- موس -->
-    <div class="order-pointer">
-        🖱️
+    <div class="copyright">
+
+        © تمامی حقوق برای BotPro محفوظ است.
+
     </div>
 
+</footer>
 
-    <!-- میز -->
-    <div class="order-desk"></div>
-
-          </div>
+</body>
+    </html>
