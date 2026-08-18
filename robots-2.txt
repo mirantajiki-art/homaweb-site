@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mirantajiki-art.github.io/homaweb-site/sitemap.xml
